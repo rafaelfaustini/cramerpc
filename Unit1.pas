@@ -151,6 +151,9 @@ type
     procedure Image1Click(Sender: TObject);
     procedure Timer7Timer(Sender: TObject);
     procedure Timer6Timer(Sender: TObject);
+    procedure FlatEdit1Enter(Sender: TObject);
+    procedure FlatEdit2Enter(Sender: TObject);
+    procedure FlatEdit3Enter(Sender: TObject);
   private
     { Private declarations }
   public
@@ -176,7 +179,7 @@ begin
           Key := #0
  
       {endif}
- 
+
     end
  
   else
@@ -210,6 +213,33 @@ begin
  
   
   Result := Key;
+
+end;
+
+function quadratica(a,b,c:real;memo:TFlatMemo):real;
+var
+delta,x1,x2,tmp:real;
+begin
+
+delta:=(b*b)-(4*a*c);
+try
+tmp:= 2*a;
+x1:=((b*-1)+sqrt(delta))/tmp;
+x2:=((b*-1)-sqrt(delta))/tmp;
+ except
+    Result:= 0;
+  end;
+
+memo.Lines.Add('Bhaskara By Rafael Faustini');
+memo.Lines.Add(DateToStr(date)+' '+TimeToStr(Time));
+memo.Lines.Add(DateToStr(date)+' '+'Equação de 2º Grau'+' '+TimeToStr(Time));
+memo.Lines.Add('------------------------------------------------------------');
+memo.Lines.Add('Delta é '+floattostr(delta));
+memo.Lines.Add('X1 é '+floattostr(x1));
+memo.Lines.Add('X2 é  '+floattostr(x2));
+memo.Lines.Add('------------------------------------------------------------');
+Result:= 1;
+
 
 end;
 
@@ -385,17 +415,11 @@ begin
 a:= StrToFloat(flatedit1.text);
 b:= StrToFloat(flatedit2.text);
 c:= StrToFloat(flatedit3.text);
-delta:=(b*b)-(4*a*c);
-x1:=((b*-1)+sqrt(delta))/2*a;
-x2:=((b*-1)-sqrt(delta))/2*a;
-memo1.Lines.Add('Bhaskara By Rafael Faustini');
-memo1.Lines.Add(DateToStr(date)+' '+TimeToStr(Time));
-memo1.Lines.Add(DateToStr(date)+' '+'Equação de 2º Grau'+' '+TimeToStr(Time));
-memo1.Lines.Add('------------------------------------------------------------');
-memo1.Lines.Add('Delta é '+floattostr(delta));
-memo1.Lines.Add('X1 é '+floattostr(x1));
-memo1.Lines.Add('X2 é  '+floattostr(x2));
-memo1.Lines.Add('------------------------------------------------------------');
+if(quadratica(a,b,c,memo1)=1)then
+begin
+
+end else
+showmessage('Houve um erro ao fazer o cálculo');
 end;
 end;
 procedure TForm1.Edit1Exit(Sender: TObject);
@@ -1045,6 +1069,21 @@ button1.Enabled:=true
 end
 else
 button1.Enabled:=false;
+end;
+
+procedure TForm1.FlatEdit1Enter(Sender: TObject);
+begin
+edit1.Font.Color:= ClBlack;
+end;
+
+procedure TForm1.FlatEdit2Enter(Sender: TObject);
+begin
+edit1.Font.Color:= ClBlack;
+end;
+
+procedure TForm1.FlatEdit3Enter(Sender: TObject);
+begin
+edit1.Font.Color:= ClBlack;
 end;
 
 end.

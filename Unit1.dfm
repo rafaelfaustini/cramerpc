@@ -17,7 +17,7 @@ object Form1: TForm1
     Left = 0
     Top = 0
     Width = 1274
-    Height = 634
+    Height = 633
     Align = alClient
     OnClick = Image1Click
   end
@@ -180,7 +180,7 @@ object Form1: TForm1
   object Label13: TLabel
     Left = 8
     Top = 600
-    Width = 297
+    Width = 295
     Height = 32
     Caption = 'Feito POR RAFAEL FAUSTINI'
     Font.Charset = ANSI_CHARSET
@@ -193,7 +193,7 @@ object Form1: TForm1
   object Label14: TLabel
     Left = 336
     Top = 8
-    Width = 197
+    Width = 195
     Height = 32
     Caption = 'Vers'#227'o 1.0.0 FINAL'
     Font.Charset = ANSI_CHARSET
@@ -691,7 +691,7 @@ object Form1: TForm1
     Height = 17
     Caption = '3 Variaveis'
     Checked = True
-    TabOrder = 230
+    TabOrder = 225
     TabStop = True
   end
   object RadioButton2: TRadioButton
@@ -700,7 +700,7 @@ object Form1: TForm1
     Width = 113
     Height = 17
     Caption = '2 Variaveis'
-    TabOrder = 233
+    TabOrder = 229
   end
   object FlatEdit1: TFlatEdit
     Left = 232
@@ -716,8 +716,9 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 234
+    TabOrder = 231
     Visible = False
+    OnEnter = FlatEdit1Enter
   end
   object FlatEdit2: TFlatEdit
     Left = 400
@@ -733,8 +734,9 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 235
+    TabOrder = 233
     Visible = False
+    OnEnter = FlatEdit2Enter
   end
   object FlatEdit3: TFlatEdit
     Left = 552
@@ -750,8 +752,9 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 236
+    TabOrder = 235
     Visible = False
+    OnEnter = FlatEdit3Enter
   end
   object RadioButton3: TRadioButton
     Left = 88
