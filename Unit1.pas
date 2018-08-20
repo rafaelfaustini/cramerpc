@@ -157,6 +157,7 @@ type
     procedure SetLabelFont(Font:TFont);
     procedure SetEditFont(Font:TFont);
     procedure SetButtonFont(Font:TFont);
+    procedure ToggleFlatButton(from:integer;tof:integer;hide:boolean);
   private
     { Private declarations }
   public
@@ -699,6 +700,14 @@ begin
     if Components[i] is TFlatEdit then
       TFlatEdit(Components[i]).Font := Font;
 end;
+procedure TForm1.ToggleFlatButton(from:integer;tof:integer;hide:boolean);
+var
+i:integer;
+begin
+  for i := from to tof do
+    if Components[i] is TFlatButton then
+      TFlatButton(Components[i]).visible := false;
+end;
 procedure TForm1.SetButtonFont(Font:TFont);
 var
 i:integer;
@@ -723,12 +732,7 @@ end;
 
 procedure TForm1.FlatButton7Click(Sender: TObject);
 begin
-flatbutton4.Visible:=false;
-flatbutton5.Visible:=false;
-flatbutton6.Visible:=false;
-flatbutton7.Visible:=false;
-flatbutton8.Visible:=false;
-flatbutton9.Visible:=false;
+ToggleFlatButton(4,9,true);
 end;
 
 procedure TForm1.FlatButton3Click(Sender: TObject);
