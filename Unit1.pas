@@ -154,6 +154,9 @@ type
     procedure FlatEdit1Enter(Sender: TObject);
     procedure FlatEdit2Enter(Sender: TObject);
     procedure FlatEdit3Enter(Sender: TObject);
+    procedure SetLabelFont(Font:TFont);
+    procedure SetEditFont(Font:TFont);
+    procedure SetButtonFont(Font:TFont);
   private
     { Private declarations }
   public
@@ -680,28 +683,41 @@ Flatbutton6.ColorBorder:=ColorDialog2.Color;
 memo1.ColorBorder:=ColorDialog2.Color;
 end;
 
+procedure TForm1.SetLabelFont(Font:TFont);
+var
+i:integer;
+begin
+  for i := 0 to ComponentCount - 1 do
+    if Components[i] is TLabel then
+      TLabel(Components[i]).Font := Font;
+end;
+procedure TForm1.SetEditFont(Font:TFont);
+var
+i:integer;
+begin
+  for i := 0 to ComponentCount - 1 do
+    if Components[i] is TFlatEdit then
+      TFlatEdit(Components[i]).Font := Font;
+end;
+procedure TForm1.SetButtonFont(Font:TFont);
+var
+i:integer;
+begin
+  for i := 0 to ComponentCount - 1 do
+    if Components[i] is TFlatButton then
+      TFlatButton(Components[i]).Font := Font;
+end;
+
 procedure TForm1.FlatButton6Click(Sender: TObject);
+var
+i:integer;
 begin
 FontDialog1.Execute;
-Form1.Font:=FontDialog1.Font;
-Edit1.Font:=FontDialog1.Font;
-Edit2.Font:=FontDialog1.Font;
-Edit3.Font:=FontDialog1.Font;
-Edit4.Font:=FontDialog1.Font;
-Edit5.Font:=FontDialog1.Font;
-Edit6.Font:=FontDialog1.Font;
-Edit7.Font:=FontDialog1.Font;
-Edit8.Font:=FontDialog1.Font;
-Edit9.Font:=FontDialog1.Font;
-Edit10.Font:=FontDialog1.Font;
-Edit11.Font:=FontDialog1.Font;
-Edit12.Font:=FontDialog1.Font;
-Flatbutton1.Font:=FontDialog1.Font;
-Flatbutton2.Font:=FontDialog1.Font;
-Flatbutton3.Font:=FontDialog1.Font;
-Flatbutton4.Font:=FontDialog1.Font;
-Flatbutton5.Font:=FontDialog1.Font;
-Flatbutton6.Font:=FontDialog1.Font;
+
+SetLabelFont(FontDialog1.Font);
+SetButtonFont(FontDialog1.Font);
+
+
 memo1.Font:=FontDialog1.Font;
 end;
 

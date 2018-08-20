@@ -691,7 +691,7 @@ object Form1: TForm1
     Height = 17
     Caption = '3 Variaveis'
     Checked = True
-    TabOrder = 225
+    TabOrder = 215
     TabStop = True
   end
   object RadioButton2: TRadioButton
@@ -700,7 +700,7 @@ object Form1: TForm1
     Width = 113
     Height = 17
     Caption = '2 Variaveis'
-    TabOrder = 229
+    TabOrder = 221
   end
   object FlatEdit1: TFlatEdit
     Left = 232
@@ -716,7 +716,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 231
+    TabOrder = 225
     Visible = False
     OnEnter = FlatEdit1Enter
   end
@@ -734,7 +734,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 233
+    TabOrder = 229
     Visible = False
     OnEnter = FlatEdit2Enter
   end
@@ -752,7 +752,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 235
+    TabOrder = 233
     Visible = False
     OnEnter = FlatEdit3Enter
   end
@@ -800,7 +800,7 @@ object Form1: TForm1
   object SelectOnRunTime1: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 568
     Top = 56
@@ -808,7 +808,7 @@ object Form1: TForm1
   object SelectOnRunTime2: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 568
     Top = 88
@@ -816,7 +816,7 @@ object Form1: TForm1
   object SelectOnRunTime3: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 568
     Top = 120
@@ -832,7 +832,7 @@ object Form1: TForm1
   object SelectOnRunTime5: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 608
     Top = 88
@@ -840,7 +840,7 @@ object Form1: TForm1
   object SelectOnRunTime6: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 608
     Top = 56
@@ -848,7 +848,7 @@ object Form1: TForm1
   object SelectOnRunTime7: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 640
     Top = 120
@@ -856,7 +856,7 @@ object Form1: TForm1
   object SelectOnRunTime8: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 640
     Top = 88
@@ -864,7 +864,7 @@ object Form1: TForm1
   object SelectOnRunTime9: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 640
     Top = 56
@@ -872,7 +872,7 @@ object Form1: TForm1
   object SelectOnRunTime10: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 672
     Top = 56
@@ -880,7 +880,7 @@ object Form1: TForm1
   object SelectOnRunTime11: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 672
     Top = 88
@@ -888,7 +888,7 @@ object Form1: TForm1
   object SelectOnRunTime12: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 672
     Top = 120
@@ -896,7 +896,7 @@ object Form1: TForm1
   object SelectOnRunTime13: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 704
     Top = 120
@@ -904,7 +904,7 @@ object Form1: TForm1
   object SelectOnRunTime14: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 704
     Top = 88
@@ -912,7 +912,7 @@ object Form1: TForm1
   object SelectOnRunTime15: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 704
     Top = 56
@@ -920,7 +920,7 @@ object Form1: TForm1
   object SelectOnRunTime16: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 736
     Top = 56
@@ -928,7 +928,7 @@ object Form1: TForm1
   object SelectOnRunTime17: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 768
     Top = 56
@@ -936,7 +936,7 @@ object Form1: TForm1
   object SelectOnRunTime18: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 800
     Top = 56
@@ -944,7 +944,7 @@ object Form1: TForm1
   object SelectOnRunTime19: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 736
     Top = 88
@@ -952,7 +952,7 @@ object Form1: TForm1
   object SelectOnRunTime20: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 768
     Top = 88
@@ -960,7 +960,7 @@ object Form1: TForm1
   object SelectOnRunTime21: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 800
     Top = 88
@@ -968,7 +968,7 @@ object Form1: TForm1
   object SelectOnRunTime22: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 800
     Top = 120
@@ -976,7 +976,7 @@ object Form1: TForm1
   object SelectOnRunTime23: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 768
     Top = 120
@@ -984,7 +984,7 @@ object Form1: TForm1
   object SelectOnRunTime24: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 736
     Top = 120
@@ -1000,7 +1000,7 @@ object Form1: TForm1
   object SelectOnRunTime26: TSelectOnRunTime
     Active = False
     MarkColor = clBlack
-    Markers3D = False
+    Markers3D = True
     SelectTag = 9999
     Left = 832
     Top = 88
