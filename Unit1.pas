@@ -155,9 +155,9 @@ type
     procedure FlatEdit2Enter(Sender: TObject);
     procedure FlatEdit3Enter(Sender: TObject);
     procedure SetLabelFont(Font:TFont);
-    procedure SetEditFont(Font:TFont);
     procedure SetButtonFont(Font:TFont);
-    procedure ToggleFlatButton(from:integer;tof:integer;hide:boolean);
+    procedure ToggleFlatButton(from:integer;tof:integer);
+
   private
     { Private declarations }
   public
@@ -692,22 +692,8 @@ begin
     if Components[i] is TLabel then
       TLabel(Components[i]).Font := Font;
 end;
-procedure TForm1.SetEditFont(Font:TFont);
-var
-i:integer;
-begin
-  for i := 0 to ComponentCount - 1 do
-    if Components[i] is TFlatEdit then
-      TFlatEdit(Components[i]).Font := Font;
-end;
-procedure TForm1.ToggleFlatButton(from:integer;tof:integer;hide:boolean);
-var
-i:integer;
-begin
-  for i := from to tof do
-    if Components[i] is TFlatButton then
-      TFlatButton(Components[i]).visible := false;
-end;
+
+
 procedure TForm1.SetButtonFont(Font:TFont);
 var
 i:integer;
@@ -729,20 +715,33 @@ SetButtonFont(FontDialog1.Font);
 
 memo1.Font:=FontDialog1.Font;
 end;
+procedure TForm1.ToggleFlatButton(from:integer;tof:integer);
+var
+i:integer;
+begin
+  for i := from to tof do
 
+    if Components[i] is TFlatButton then
+        begin
+        
+       if TFlatButton(Components[i]).Visible = false then
+        begin
+          showmessage('True');
+          TFlatButton(Components[i]).Visible := true;
+        end else
+        begin
+          showmessage('False');
+          TFlatButton(Components[i]).Visible := false;
+           end;
+          end;
+          end;
 procedure TForm1.FlatButton7Click(Sender: TObject);
 begin
-ToggleFlatButton(4,9,true);
+ToggleFlatButton(4,9);
 end;
-
 procedure TForm1.FlatButton3Click(Sender: TObject);
 begin
-flatbutton4.Visible:=true;
-flatbutton5.Visible:=true;
-flatbutton6.Visible:=true;
-flatbutton7.Visible:=true;
-flatbutton8.Visible:=true;
-flatbutton9.Visible:=true;
+ToggleFlatButton(4,9);
 
 end;
 
