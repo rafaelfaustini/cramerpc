@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 378
-  Top = 294
+  Left = 358
+  Top = 167
   Width = 1290
   Height = 672
   Caption = 'REGRA DE CRAMER BY:RAFAELFAUSTINI'
@@ -16,8 +16,8 @@ object Form1: TForm1
   object Image1: TImage
     Left = 0
     Top = 0
-    Width = 1274
-    Height = 633
+    Width = 1257
+    Height = 635
     Align = alClient
     OnClick = Image1Click
   end
@@ -180,13 +180,13 @@ object Form1: TForm1
   object Label13: TLabel
     Left = 8
     Top = 600
-    Width = 295
-    Height = 32
+    Width = 305
+    Height = 35
     Caption = 'Feito POR RAFAEL FAUSTINI'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -24
-    Font.Name = 'Segoe UI'
+    Font.Name = 'Overpass Light'
     Font.Style = []
     ParentFont = False
   end
@@ -202,14 +202,6 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-  end
-  object Label15: TLabel
-    Left = 880
-    Top = 621
-    Width = 38
-    Height = 13
-    Caption = 'Label15'
-    Visible = False
   end
   object Label16: TLabel
     Left = 360
@@ -675,7 +667,7 @@ object Form1: TForm1
     OnClick = FlatButton9Click
   end
   object FlatCheckBox1: TFlatCheckBox
-    Left = 696
+    Left = 656
     Top = 8
     Width = 121
     Height = 17
@@ -691,7 +683,7 @@ object Form1: TForm1
     Height = 17
     Caption = '3 Variaveis'
     Checked = True
-    TabOrder = 215
+    TabOrder = 210
     TabStop = True
   end
   object RadioButton2: TRadioButton
@@ -700,7 +692,7 @@ object Form1: TForm1
     Width = 113
     Height = 17
     Caption = '2 Variaveis'
-    TabOrder = 221
+    TabOrder = 217
   end
   object FlatEdit1: TFlatEdit
     Left = 232
@@ -716,7 +708,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 225
+    TabOrder = 222
     Visible = False
     OnEnter = FlatEdit1Enter
   end
@@ -734,7 +726,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 229
+    TabOrder = 227
     Visible = False
     OnEnter = FlatEdit2Enter
   end
@@ -752,7 +744,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 233
+    TabOrder = 232
     Visible = False
     OnEnter = FlatEdit3Enter
   end
@@ -797,216 +789,7 @@ object Form1: TForm1
     Left = 320
     Top = 120
   end
-  object SelectOnRunTime1: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 568
-    Top = 56
-  end
-  object SelectOnRunTime2: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 568
-    Top = 88
-  end
-  object SelectOnRunTime3: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 568
-    Top = 120
-  end
-  object SelectOnRunTime4: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = False
-    SelectTag = 9999
-    Left = 608
-    Top = 120
-  end
-  object SelectOnRunTime5: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 608
-    Top = 88
-  end
-  object SelectOnRunTime6: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 608
-    Top = 56
-  end
-  object SelectOnRunTime7: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 640
-    Top = 120
-  end
-  object SelectOnRunTime8: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 640
-    Top = 88
-  end
-  object SelectOnRunTime9: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 640
-    Top = 56
-  end
-  object SelectOnRunTime10: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 672
-    Top = 56
-  end
-  object SelectOnRunTime11: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 672
-    Top = 88
-  end
-  object SelectOnRunTime12: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 672
-    Top = 120
-  end
-  object SelectOnRunTime13: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 704
-    Top = 120
-  end
-  object SelectOnRunTime14: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 704
-    Top = 88
-  end
-  object SelectOnRunTime15: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 704
-    Top = 56
-  end
-  object SelectOnRunTime16: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 736
-    Top = 56
-  end
-  object SelectOnRunTime17: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 768
-    Top = 56
-  end
-  object SelectOnRunTime18: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 800
-    Top = 56
-  end
-  object SelectOnRunTime19: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 736
-    Top = 88
-  end
-  object SelectOnRunTime20: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 768
-    Top = 88
-  end
-  object SelectOnRunTime21: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 800
-    Top = 88
-  end
-  object SelectOnRunTime22: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 800
-    Top = 120
-  end
-  object SelectOnRunTime23: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 768
-    Top = 120
-  end
-  object SelectOnRunTime24: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 736
-    Top = 120
-  end
-  object SelectOnRunTime25: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = False
-    SelectTag = 9999
-    Left = 832
-    Top = 120
-  end
-  object SelectOnRunTime26: TSelectOnRunTime
-    Active = False
-    MarkColor = clBlack
-    Markers3D = True
-    SelectTag = 9999
-    Left = 832
-    Top = 88
-  end
   object Timer2: TTimer
-    OnTimer = Timer2Timer
     Left = 96
     Top = 328
   end

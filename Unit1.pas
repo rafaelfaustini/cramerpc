@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, TFlatButtonUnit, TFlatMemoUnit, TFlatEditUnit,
-  ExtCtrls, XPMan, TFlatCheckBoxUnit, CSelectOnRunTime;
+  ExtCtrls, XPMan, TFlatCheckBoxUnit, CSelectOnRunTime, StrUtils;
 
 type
   TForm1 = class(TForm)
@@ -54,34 +54,7 @@ type
     OpenDialog1: TOpenDialog;
     FlatButton9: TFlatButton;
     FlatCheckBox1: TFlatCheckBox;
-    SelectOnRunTime1: TSelectOnRunTime;
-    SelectOnRunTime2: TSelectOnRunTime;
-    SelectOnRunTime3: TSelectOnRunTime;
-    SelectOnRunTime4: TSelectOnRunTime;
-    SelectOnRunTime5: TSelectOnRunTime;
-    SelectOnRunTime6: TSelectOnRunTime;
-    SelectOnRunTime7: TSelectOnRunTime;
-    SelectOnRunTime8: TSelectOnRunTime;
-    SelectOnRunTime9: TSelectOnRunTime;
-    SelectOnRunTime10: TSelectOnRunTime;
-    SelectOnRunTime11: TSelectOnRunTime;
-    SelectOnRunTime12: TSelectOnRunTime;
-    SelectOnRunTime13: TSelectOnRunTime;
-    SelectOnRunTime14: TSelectOnRunTime;
-    SelectOnRunTime15: TSelectOnRunTime;
-    SelectOnRunTime16: TSelectOnRunTime;
-    SelectOnRunTime17: TSelectOnRunTime;
-    SelectOnRunTime18: TSelectOnRunTime;
-    SelectOnRunTime19: TSelectOnRunTime;
-    SelectOnRunTime20: TSelectOnRunTime;
-    SelectOnRunTime21: TSelectOnRunTime;
-    SelectOnRunTime22: TSelectOnRunTime;
-    SelectOnRunTime23: TSelectOnRunTime;
-    SelectOnRunTime24: TSelectOnRunTime;
-    SelectOnRunTime25: TSelectOnRunTime;
-    SelectOnRunTime26: TSelectOnRunTime;
     Timer2: TTimer;
-    Label15: TLabel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     Timer3: TTimer;
@@ -144,7 +117,6 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure FlatButton8Click(Sender: TObject);
     procedure FlatButton9Click(Sender: TObject);
-    procedure Timer2Timer(Sender: TObject);
     procedure Timer3Timer(Sender: TObject);
     procedure Timer5Timer(Sender: TObject);
     procedure Timer4Timer(Sender: TObject);
@@ -715,24 +687,47 @@ SetButtonFont(FontDialog1.Font);
 
 memo1.Font:=FontDialog1.Font;
 end;
+
+function contem(name:string;from:integer;tof:integer):boolean;
+var
+i:integer;
+begin
+
+
+   for i:= from to tof do
+
+   begin
+
+    if AnsiContainsStr(name, IntToStr(i)) then
+      begin
+      Result:= True;
+      showmessage('true');
+      end;
+   end;
+
+   Result:= False;
+end;
 procedure TForm1.ToggleFlatButton(from:integer;tof:integer);
 var
 i:integer;
 begin
-  for i := from to tof do
+
+
+
+  for i := 0 to ComponentCount -1 do
 
     if Components[i] is TFlatButton then
         begin
-        
-       if TFlatButton(Components[i]).Visible = false then
-        begin
-          showmessage('True');
-          TFlatButton(Components[i]).Visible := true;
-        end else
-        begin
-          showmessage('False');
-          TFlatButton(Components[i]).Visible := false;
-           end;
+         if contem(TFlatButton(Components[i]).Name,from,tof)=true then
+         begin
+         showmessage('Chegou dentro');
+         if(TFlatButton(Components[i]).Visible=true)then
+          begin
+            TFlatButton(Components[i]).Visible:=false;
+          end else
+          TFlatButton(Components[i]).Visible:=true;
+
+          end;
           end;
           end;
 procedure TForm1.FlatButton7Click(Sender: TObject);
@@ -785,113 +780,6 @@ Flatbutton3.ColorBorder:= ClWhite;
 Flatbutton4.ColorBorder:= ClWhite;
 Flatbutton5.ColorBorder:= ClWhite;
 Flatbutton6.ColorBorder:= ClWhite;
-end;
-
-procedure TForm1.Timer2Timer(Sender: TObject);
-begin
-if flatcheckbox1.Checked then
-begin
-Selectonruntime1.SelectControl:= Edit1;
-Selectonruntime2.SelectControl:= Edit2;
-Selectonruntime3.SelectControl:= Edit3;
-Selectonruntime4.SelectControl:= Edit4;
-Selectonruntime5.SelectControl:= Edit5;
-Selectonruntime6.SelectControl:= Edit6;
-Selectonruntime7.SelectControl:= Edit7;
-Selectonruntime8.SelectControl:= Edit8;
-Selectonruntime9.SelectControl:= Edit9;
-Selectonruntime10.SelectControl:= Edit10;
-Selectonruntime11.SelectControl:= Edit11;
-Selectonruntime12.SelectControl:= Edit12;
-Selectonruntime13.SelectControl:= Label1;
-Selectonruntime14.SelectControl:= Label2;
-Selectonruntime15.SelectControl:= Label3;
-Selectonruntime16.SelectControl:= Label4;
-Selectonruntime17.SelectControl:= Label5;
-Selectonruntime18.SelectControl:= Label6;
-Selectonruntime19.SelectControl:= Label7;
-Selectonruntime20.SelectControl:= Label8;
-Selectonruntime21.SelectControl:= Label9;
-Selectonruntime22.SelectControl:= Memo1;
-Selectonruntime23.SelectControl:= Flatbutton1;
-Selectonruntime24.SelectControl:= Flatbutton2;
-Selectonruntime1.Active:=true;
-Selectonruntime2.Active:=true;
-Selectonruntime3.Active:=true;
-Selectonruntime4.Active:=true;
-Selectonruntime5.Active:=true;
-Selectonruntime6.Active:=true;
-Selectonruntime7.Active:=true;
-Selectonruntime8.Active:=true;
-Selectonruntime9.Active:=true;
-Selectonruntime10.Active:=true;
-Selectonruntime11.Active:=true;
-Selectonruntime12.Active:=true;
-Selectonruntime13.Active:=true;
-Selectonruntime14.Active:=true;
-Selectonruntime15.Active:=true;
-Selectonruntime16.Active:=true;
-Selectonruntime17.Active:=true;
-Selectonruntime18.Active:=true;
-Selectonruntime19.Active:=true;
-Selectonruntime20.Active:=true;
-Selectonruntime21.Active:=true;
-Selectonruntime22.Active:=true;
-Selectonruntime23.Active:=true;
-Selectonruntime24.Active:=true;
-end
-else
-begin
-Selectonruntime1.SelectControl:= Label15;
-Selectonruntime2.SelectControl:= Label15;
-Selectonruntime3.SelectControl:= Label15;
-Selectonruntime4.SelectControl:= Label15;
-Selectonruntime5.SelectControl:= Label15;
-Selectonruntime6.SelectControl:= Label15;
-Selectonruntime7.SelectControl:= Label15;
-Selectonruntime8.SelectControl:= Label15;
-Selectonruntime9.SelectControl:= Label15;
-Selectonruntime10.SelectControl:= Label15;
-Selectonruntime11.SelectControl:= Label15;
-Selectonruntime12.SelectControl:= Label15;
-Selectonruntime13.SelectControl:= Label15;
-Selectonruntime14.SelectControl:= Label15;
-Selectonruntime15.SelectControl:= Label15;
-Selectonruntime16.SelectControl:= Label15;
-Selectonruntime17.SelectControl:= Label15;
-Selectonruntime18.SelectControl:= Label15;
-Selectonruntime19.SelectControl:= Label15;
-Selectonruntime20.SelectControl:= Label15;
-Selectonruntime21.SelectControl:= Label15;
-Selectonruntime22.SelectControl:= Label15;
-Selectonruntime23.SelectControl:= Label15;
-Selectonruntime24.SelectControl:= Label15;
-Selectonruntime1.Active:=false;
-Selectonruntime2.Active:=false;
-Selectonruntime3.Active:=false;
-Selectonruntime4.Active:=false;
-Selectonruntime5.Active:=false;
-Selectonruntime6.Active:=false;
-Selectonruntime7.Active:=false;
-Selectonruntime8.Active:=false;
-Selectonruntime9.Active:=false;
-Selectonruntime10.Active:=false;
-Selectonruntime11.Active:=false;
-Selectonruntime12.Active:=false;
-Selectonruntime13.Active:=false;
-Selectonruntime14.Active:=false;
-Selectonruntime15.Active:=false;
-Selectonruntime16.Active:=false;
-Selectonruntime17.Active:=false;
-Selectonruntime18.Active:=false;
-Selectonruntime19.Active:=false;
-Selectonruntime20.Active:=false;
-Selectonruntime21.Active:=false;
-Selectonruntime22.Active:=false;
-Selectonruntime23.Active:=false;
-Selectonruntime24.Active:=false;
-end;
-
 end;
 procedure TForm1.Timer3Timer(Sender: TObject);
 begin
