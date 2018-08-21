@@ -112,7 +112,6 @@ type
     procedure FlatButton5Click(Sender: TObject);
     procedure FlatButton4Click(Sender: TObject);
     procedure FlatButton6Click(Sender: TObject);
-    procedure FlatButton7Click(Sender: TObject);
     procedure FlatButton3Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure FlatButton8Click(Sender: TObject);
@@ -700,40 +699,30 @@ begin
 
     if AnsiContainsStr(name, IntToStr(i)) then
       begin
-      Result:= True;
-      showmessage('true');
+      result:= true;
+      Exit;
       end;
    end;
 
-   Result:= False;
+   result:= false;
 end;
 procedure TForm1.ToggleFlatButton(from:integer;tof:integer);
 var
 i:integer;
 begin
-
-
-
   for i := 0 to ComponentCount -1 do
-
     if Components[i] is TFlatButton then
         begin
          if contem(TFlatButton(Components[i]).Name,from,tof)=true then
          begin
-         showmessage('Chegou dentro');
          if(TFlatButton(Components[i]).Visible=true)then
           begin
             TFlatButton(Components[i]).Visible:=false;
           end else
           TFlatButton(Components[i]).Visible:=true;
-
           end;
           end;
           end;
-procedure TForm1.FlatButton7Click(Sender: TObject);
-begin
-ToggleFlatButton(4,9);
-end;
 procedure TForm1.FlatButton3Click(Sender: TObject);
 begin
 ToggleFlatButton(4,9);

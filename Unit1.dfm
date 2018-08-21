@@ -630,7 +630,6 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 20
     Visible = False
-    OnClick = FlatButton7Click
   end
   object FlatButton8: TFlatButton
     Left = 0
@@ -683,6 +682,14 @@ object Form1: TForm1
     Height = 17
     Caption = '3 Variaveis'
     Checked = True
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Overpass Light'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
     TabOrder = 210
     TabStop = True
   end
@@ -692,6 +699,14 @@ object Form1: TForm1
     Width = 113
     Height = 17
     Caption = '2 Variaveis'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Overpass Light'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
     TabOrder = 217
   end
   object FlatEdit1: TFlatEdit
@@ -754,9 +769,18 @@ object Form1: TForm1
     Width = 113
     Height = 17
     Caption = '2'#186' Grau'
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Overpass Light'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
     TabOrder = 237
   end
   object SaveDialog1: TSaveDialog
+    Filter = '.txt'
     Left = 96
     Top = 232
   end
