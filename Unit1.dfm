@@ -191,11 +191,11 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label14: TLabel
-    Left = 336
+    Left = 464
     Top = 8
-    Width = 195
+    Width = 126
     Height = 32
-    Caption = 'Vers'#227'o 1.0.0 FINAL'
+    Caption = 'Vers'#227'o 2.0.0'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -24
@@ -495,8 +495,8 @@ object Form1: TForm1
     OnMouseMove = Memo1MouseMove
   end
   object Button1: TFlatButton
-    Left = 664
-    Top = 328
+    Left = 416
+    Top = 344
     Width = 169
     Height = 25
     ColorBorder = clWhite
@@ -621,7 +621,7 @@ object Form1: TForm1
   object FlatButton8: TFlatButton
     Left = 0
     Top = 96
-    Width = 89
+    Width = 81
     Height = 25
     ColorBorder = clRed
     Caption = 'Imagem Fundo'
@@ -652,22 +652,6 @@ object Form1: TForm1
     Visible = False
     OnClick = FlatButton9Click
   end
-  object FlatCheckBox1: TFlatCheckBox
-    Left = 656
-    Top = 8
-    Width = 121
-    Height = 17
-    Caption = 'Modo Design'
-    ColorBorder = clWhite
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWhite
-    Font.Height = -11
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 22
-    TabStop = True
-  end
   object RadioButton1: TRadioButton
     Left = 88
     Top = 8
@@ -683,8 +667,9 @@ object Form1: TForm1
     Font.Style = []
     ParentColor = False
     ParentFont = False
-    TabOrder = 209
+    TabOrder = 208
     TabStop = True
+    OnClick = RadioButton1Click
   end
   object RadioButton2: TRadioButton
     Left = 88
@@ -700,7 +685,8 @@ object Form1: TForm1
     Font.Style = []
     ParentColor = False
     ParentFont = False
-    TabOrder = 216
+    TabOrder = 215
+    OnClick = RadioButton2Click
   end
   object FlatEdit1: TFlatEdit
     Left = 232
@@ -716,7 +702,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 221
+    TabOrder = 220
     Visible = False
     OnEnter = FlatEdit1Enter
   end
@@ -734,7 +720,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 226
+    TabOrder = 225
     Visible = False
     OnEnter = FlatEdit2Enter
   end
@@ -752,7 +738,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 231
+    TabOrder = 230
     Visible = False
     OnEnter = FlatEdit3Enter
   end
@@ -770,17 +756,13 @@ object Form1: TForm1
     Font.Style = []
     ParentColor = False
     ParentFont = False
-    TabOrder = 236
+    TabOrder = 235
+    OnClick = RadioButton3Click
   end
   object SaveDialog1: TSaveDialog
     Filter = '.txt'
     Left = 96
     Top = 232
-  end
-  object ColorDialog1: TColorDialog
-    Color = clGray
-    Left = 208
-    Top = 16
   end
   object FontDialog1: TFontDialog
     Font.Charset = DEFAULT_CHARSET
@@ -793,44 +775,34 @@ object Form1: TForm1
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 432
-    Top = 360
+    Left = 96
+    Top = 448
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Bitmap Image File|*.bmp'
     Left = 320
     Top = 120
   end
-  object Timer2: TTimer
-    Left = 96
-    Top = 328
-  end
   object Timer3: TTimer
     Interval = 2
     OnTimer = Timer3Timer
-    Left = 584
-    Top = 360
-  end
-  object Timer4: TTimer
-    Interval = 50
-    OnTimer = Timer4Timer
-    Left = 400
-    Top = 360
+    Left = 96
+    Top = 488
   end
   object Timer5: TTimer
     OnTimer = Timer5Timer
-    Left = 416
-    Top = 424
+    Left = 96
+    Top = 528
   end
   object Timer6: TTimer
     OnTimer = Timer6Timer
-    Left = 256
-    Top = 392
+    Left = 96
+    Top = 408
   end
   object Timer7: TTimer
     Interval = 1
     OnTimer = Timer7Timer
-    Left = 488
-    Top = 480
+    Left = 104
+    Top = 568
   end
 end

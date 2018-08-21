@@ -43,7 +43,6 @@ type
     FlatButton3: TFlatButton;
     FlatButton4: TFlatButton;
     FlatButton5: TFlatButton;
-    ColorDialog1: TColorDialog;
     FlatButton6: TFlatButton;
     FontDialog1: TFontDialog;
     Timer1: TTimer;
@@ -51,12 +50,9 @@ type
     FlatButton8: TFlatButton;
     OpenDialog1: TOpenDialog;
     FlatButton9: TFlatButton;
-    FlatCheckBox1: TFlatCheckBox;
-    Timer2: TTimer;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     Timer3: TTimer;
-    Timer4: TTimer;
     Timer5: TTimer;
     FlatEdit1: TFlatEdit;
     FlatEdit2: TFlatEdit;
@@ -116,7 +112,6 @@ type
     procedure FlatButton9Click(Sender: TObject);
     procedure Timer3Timer(Sender: TObject);
     procedure Timer5Timer(Sender: TObject);
-    procedure Timer4Timer(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Timer7Timer(Sender: TObject);
     procedure Timer6Timer(Sender: TObject);
@@ -131,6 +126,9 @@ type
 
     procedure Memo1MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
+    procedure RadioButton3Click(Sender: TObject);
+    procedure RadioButton2Click(Sender: TObject);
+    procedure RadioButton1Click(Sender: TObject);
 
 
   private
@@ -750,11 +748,15 @@ else
 button1.Enabled:=false;
 end;
 procedure TForm1.FlatButton8Click(Sender: TObject);
+var
+tmp:TOpenDialog;
 begin
-if OpenDialog1.Execute then
+tmp := TOpenDialog.Create(nil);
+if tmp.Execute then
   begin
     image1.Visible:=true;
-    image1.Picture.LoadFromFile(OpenDialog1.FileName);
+    image1.Picture.LoadFromFile(tmp.FileName);
+    tmp.Free;
   end;
 end;
 
@@ -836,77 +838,6 @@ else
 button1.Enabled:=false;
 end;
 
-procedure TForm1.Timer4Timer(Sender: TObject);
-begin
-if radiobutton3.Checked=true then
-begin
-edit7.Visible:= false;
-label7.Visible:= false;
-edit8.Visible:= false;
-label8.Visible:= false;
-edit9.Visible:= false;
-edit3.Visible:= false;
-edit6.Visible:= false;
-label2.Visible:=false;
-label1.Visible:=false;
-label4.Visible:=false;
-label5.Visible:=false;
-label9.Visible:= false;
-label3.Visible:= false ;
-label6.Visible:= false;
-label7.Visible:=false;
-label8.Visible:=false;
-label10.Visible:=false;
-edit12.Visible:=false;
-label12.Visible:=false;
-edit1.Visible:=false;
-edit2.Visible:=false;
-edit3.Visible:=false;
-edit4.Visible:=false;
-edit5.Visible:=false;
-edit6.Visible:=false;
-edit7.Visible:=false;
-edit8.Visible:=false;
-edit9.Visible:=false;
-edit10.Visible:=false;
-edit11.Visible:=false;
-label11.Visible:=false;
-label12.Visible:=false;
-flatedit1.top:=192;
-flatedit2.top:=192;
-flatedit3.top:=192;
-label16.top:= 192;
-label17.top:= 192;
-label18.top:= 192;
-label19.top:= 192;
-flatedit1.Visible:=true;
-flatedit2.Visible:=true;
-flatedit3.Visible:=true;
-label16.Visible:=true;
-label17.Visible:=true;
-label18.Visible:=true;
-label19.Visible:=true;
-form1.Caption:='BHASKARA BY: RAFAELFAUSTINI';
-end;
-if radiobutton3.Checked=false then
-begin
-flatedit1.top:=288;
-flatedit2.top:=288;
-flatedit3.top:=288;
-label16.top:= 288;
-label17.top:= 288;
-label18.top:= 288;
-label19.top:= 288;
-flatedit1.Visible:=false;
-flatedit2.Visible:=false;
-flatedit3.Visible:=false;
-label16.Visible:=false;
-label17.Visible:=false;
-label18.Visible:=false;
-label19.Visible:=false;
-form1.Caption:='REGRA DE CRAMER BY: RAFAELFAUSTINI';
-end;
-end;
 procedure TForm1.Image1Click(Sender: TObject);
 begin
 if (radiobutton3.Checked= true) and (edit1.Text<>'')and(edit2.Text<>'')and(edit4.Text<>'')and(edit5.Text<>'')and(edit10.Text<>'')and(edit11.Text<>'') then
@@ -922,49 +853,7 @@ procedure TForm1.Timer7Timer(Sender: TObject);
 begin
 if radiobutton2.Checked=true then
 begin
-edit7.Visible:= false;
-label7.Visible:= false;
-edit8.Visible:= false;
-label8.Visible:= false;
-edit9.Visible:= false;
 
-
-label3.Visible:=false;
-label6.Visible:=false;
-label9.Visible:= false;
-label7.Visible:=false;
-label8.Visible:=false;
-edit12.Visible:=false;
-label12.Visible:=false;
-
-
-edit3.Visible:=false;
-
-
-edit6.Visible:=false;
-edit7.Visible:=false;
-edit8.Visible:=false;
-edit9.Visible:=false;
-
-label12.Visible:=false;
-edit1.Visible:=true;
-edit2.Visible:=true;
-edit4.Visible:=true;
-edit5.Visible:=true;
-edit10.Visible:=true;
-edit11.Visible:=true;
-label1.Visible:=true;
-label2.Visible:=true;
-label4.Visible:=true;
-label5.Visible:=true;
-label3.Visible:=true;
-label6.Visible:=true;
-label10.Visible:=true;
-label11.Visible:=true;
-edit10.Left:=570;
-edit11.Left:=570;
-label10.Left:=544;
-label11.Left:=544;
 end;
 end;
 
@@ -1016,5 +905,130 @@ memo1.Font.Color:= ClWhite;
 end;
 
 
+
+procedure TForm1.RadioButton3Click(Sender: TObject);
+begin
+edit7.Visible:= false;
+label7.Visible:= false;
+edit8.Visible:= false;
+label8.Visible:= false;
+edit9.Visible:= false;
+edit3.Visible:= false;
+edit6.Visible:= false;
+label2.Visible:=false;
+label1.Visible:=false;
+label4.Visible:=false;
+label5.Visible:=false;
+label9.Visible:= false;
+label3.Visible:= false ;
+label6.Visible:= false;
+label7.Visible:=false;
+label8.Visible:=false;
+label10.Visible:=false;
+edit12.Visible:=false;
+label12.Visible:=false;
+edit1.Visible:=false;
+edit2.Visible:=false;
+edit3.Visible:=false;
+edit4.Visible:=false;
+edit5.Visible:=false;
+edit6.Visible:=false;
+edit7.Visible:=false;
+edit8.Visible:=false;
+edit9.Visible:=false;
+edit10.Visible:=false;
+edit11.Visible:=false;
+label11.Visible:=false;
+label12.Visible:=false;
+flatedit1.top:=192;
+flatedit2.top:=192;
+flatedit3.top:=192;
+label16.top:= 192;
+label17.top:= 192;
+label18.top:= 192;
+label19.top:= 192;
+flatedit1.Visible:=true;
+flatedit2.Visible:=true;
+flatedit3.Visible:=true;
+label16.Visible:=true;
+label17.Visible:=true;
+label18.Visible:=true;
+label19.Visible:=true;
+form1.Caption:='BHASKARA BY: RAFAELFAUSTINI';
+end;
+
+procedure TForm1.RadioButton2Click(Sender: TObject);
+begin
+edit7.Visible:= false;
+label7.Visible:= false;
+edit8.Visible:= false;
+label8.Visible:= false;
+edit9.Visible:= false;
+
+flatedit1.Visible:=false;
+flatedit2.Visible:=false;
+flatedit3.Visible:=false;
+label16.Visible:=false;
+label17.Visible:=false;
+label18.Visible:=false;
+label19.Visible:=false;
+
+
+label3.Visible:=false;
+label6.Visible:=false;
+label9.Visible:= false;
+label7.Visible:=false;
+label8.Visible:=false;
+edit12.Visible:=false;
+label12.Visible:=false;
+
+
+edit3.Visible:=false;
+
+
+edit6.Visible:=false;
+edit7.Visible:=false;
+edit8.Visible:=false;
+edit9.Visible:=false;
+
+label12.Visible:=false;
+edit1.Visible:=true;
+edit2.Visible:=true;
+edit4.Visible:=true;
+edit5.Visible:=true;
+edit10.Visible:=true;
+edit11.Visible:=true;
+label1.Visible:=true;
+label2.Visible:=true;
+label4.Visible:=true;
+label5.Visible:=true;
+label3.Visible:=true;
+label6.Visible:=true;
+label10.Visible:=true;
+label11.Visible:=true;
+edit10.Left:=570;
+edit11.Left:=570;
+label10.Left:=544;
+label11.Left:=544;
+end;
+
+procedure TForm1.RadioButton1Click(Sender: TObject);
+begin
+flatedit1.top:=288;
+flatedit2.top:=288;
+flatedit3.top:=288;
+label16.top:= 288;
+label17.top:= 288;
+label18.top:= 288;
+label19.top:= 288;
+flatedit1.Visible:=false;
+flatedit2.Visible:=false;
+flatedit3.Visible:=false;
+label16.Visible:=false;
+label17.Visible:=false;
+label18.Visible:=false;
+label19.Visible:=false;
+form1.Caption:='REGRA DE CRAMER BY: RAFAELFAUSTINI';
+end;
 
 end.
