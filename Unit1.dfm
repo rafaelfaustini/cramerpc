@@ -618,22 +618,6 @@ object Form1: TForm1
     Visible = False
     OnClick = FlatButton6Click
   end
-  object FlatButton7: TFlatButton
-    Left = 0
-    Top = 192
-    Width = 81
-    Height = 25
-    ColorBorder = clRed
-    Caption = 'Ocultar'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clRed
-    Font.Height = -13
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 20
-    Visible = False
-  end
   object FlatButton8: TFlatButton
     Left = 0
     Top = 96
@@ -647,7 +631,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 21
+    TabOrder = 20
     Visible = False
     OnClick = FlatButton8Click
   end
@@ -664,7 +648,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 22
+    TabOrder = 21
     Visible = False
     OnClick = FlatButton9Click
   end
@@ -675,7 +659,13 @@ object Form1: TForm1
     Height = 17
     Caption = 'Modo Design'
     ColorBorder = clWhite
-    TabOrder = 23
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 22
     TabStop = True
   end
   object RadioButton1: TRadioButton
@@ -693,7 +683,7 @@ object Form1: TForm1
     Font.Style = []
     ParentColor = False
     ParentFont = False
-    TabOrder = 210
+    TabOrder = 209
     TabStop = True
   end
   object RadioButton2: TRadioButton
@@ -710,7 +700,7 @@ object Form1: TForm1
     Font.Style = []
     ParentColor = False
     ParentFont = False
-    TabOrder = 217
+    TabOrder = 216
   end
   object FlatEdit1: TFlatEdit
     Left = 232
@@ -726,7 +716,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 222
+    TabOrder = 221
     Visible = False
     OnEnter = FlatEdit1Enter
   end
@@ -744,7 +734,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 227
+    TabOrder = 226
     Visible = False
     OnEnter = FlatEdit2Enter
   end
@@ -762,7 +752,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 232
+    TabOrder = 231
     Visible = False
     OnEnter = FlatEdit3Enter
   end
@@ -780,7 +770,7 @@ object Form1: TForm1
     Font.Style = []
     ParentColor = False
     ParentFont = False
-    TabOrder = 237
+    TabOrder = 236
   end
   object SaveDialog1: TSaveDialog
     Filter = '.txt'
@@ -791,11 +781,6 @@ object Form1: TForm1
     Color = clGray
     Left = 208
     Top = 16
-  end
-  object ColorDialog2: TColorDialog
-    Color = clWhite
-    Left = 208
-    Top = 64
   end
   object FontDialog1: TFontDialog
     Font.Charset = DEFAULT_CHARSET

@@ -44,10 +44,8 @@ type
     FlatButton4: TFlatButton;
     FlatButton5: TFlatButton;
     ColorDialog1: TColorDialog;
-    ColorDialog2: TColorDialog;
     FlatButton6: TFlatButton;
     FontDialog1: TFontDialog;
-    FlatButton7: TFlatButton;
     Timer1: TTimer;
     Image1: TImage;
     FlatButton8: TFlatButton;
@@ -133,6 +131,7 @@ type
 
     procedure Memo1MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
+
 
   private
     { Private declarations }
@@ -610,54 +609,60 @@ edit12.Font.Color:= ClBlack;
 end;
 
 procedure TForm1.FlatButton5Click(Sender: TObject);
+var
+tmpcolor:TColorDialog;
 begin
-ColorDialog1.Execute;
-Form1.color:=ColorDialog1.Color;
-Edit1.ColorFlat:=ColorDialog1.Color;
-Edit2.ColorFlat:=ColorDialog1.Color;
-Edit3.ColorFlat:=ColorDialog1.Color;
-Edit4.ColorFlat:=ColorDialog1.Color;
-Edit5.ColorFlat:=ColorDialog1.Color;
-Edit6.ColorFlat:=ColorDialog1.Color;
-Edit7.ColorFlat:=ColorDialog1.Color;
-Edit8.ColorFlat:=ColorDialog1.Color;
-Edit9.ColorFlat:=ColorDialog1.Color;
-Edit10.ColorFlat:=ColorDialog1.Color;
-Edit11.ColorFlat:=ColorDialog1.Color;
-Edit12.ColorFlat:=ColorDialog1.Color;
-Flatbutton1.Color:=ColorDialog1.Color;
-Flatbutton2.Color:=ColorDialog1.Color;
-Flatbutton3.Color:=ColorDialog1.Color;
-Flatbutton4.Color:=ColorDialog1.Color;
-Flatbutton5.Color:=ColorDialog1.Color;
-Flatbutton6.Color:=ColorDialog1.Color;
-memo1.ColorFlat:=ColorDialog1.Color;
+
+tmpcolor.Execute;
+Form1.color:=tmpcolor.Color;
+Edit1.ColorFlat:=tmpcolor.Color;
+Edit2.ColorFlat:=tmpcolor.Color;
+Edit3.ColorFlat:=tmpcolor.Color;
+Edit4.ColorFlat:=tmpcolor.Color;
+Edit5.ColorFlat:=tmpcolor.Color;
+Edit6.ColorFlat:=tmpcolor.Color;
+Edit7.ColorFlat:=tmpcolor.Color;
+Edit8.ColorFlat:=tmpcolor.Color;
+Edit9.ColorFlat:=tmpcolor.Color;
+Edit10.ColorFlat:=tmpcolor.Color;
+Edit11.ColorFlat:=tmpcolor.Color;
+Edit12.ColorFlat:=tmpcolor.Color;
+Flatbutton1.Color:=tmpcolor.Color;
+Flatbutton2.Color:=tmpcolor.Color;
+Flatbutton3.Color:=tmpcolor.Color;
+Flatbutton4.Color:=tmpcolor.Color;
+Flatbutton5.Color:=tmpcolor.Color;
+Flatbutton6.Color:=tmpcolor.Color;
+memo1.ColorFlat:=tmpcolor.Color;
 
 
 end;
 
 procedure TForm1.FlatButton4Click(Sender: TObject);
+var
+tmpcolor:TColorDialog;
 begin
-ColorDialog2.Execute;
-Edit1.ColorBorder:=ColorDialog2.Color;
-Edit2.ColorBorder:=ColorDialog2.Color;
-Edit3.ColorBorder:=ColorDialog2.Color;
-Edit4.ColorBorder:=ColorDialog2.Color;
-Edit5.ColorBorder:=ColorDialog2.Color;
-Edit6.ColorBorder:=ColorDialog2.Color;
-Edit7.ColorBorder:=ColorDialog2.Color;
-Edit8.ColorBorder:=ColorDialog2.Color;
-Edit9.ColorBorder:=ColorDialog2.Color;
-Edit10.ColorBorder:=ColorDialog2.Color;
-Edit11.ColorBorder:=ColorDialog2.Color;
-Edit12.ColorBorder:=ColorDialog2.Color;
-Flatbutton1.ColorBorder:=ColorDialog2.Color;
-Flatbutton2.ColorBorder:=ColorDialog2.Color;
-Flatbutton3.ColorBorder:=ColorDialog2.Color;
-Flatbutton4.ColorBorder:=ColorDialog2.Color;
-Flatbutton5.ColorBorder:=ColorDialog2.Color;
-Flatbutton6.ColorBorder:=ColorDialog2.Color;
-memo1.ColorBorder:=ColorDialog2.Color;
+tmpcolor.Execute;
+Edit1.ColorBorder:=tmpcolor.Color;
+Edit2.ColorBorder:=tmpcolor.Color;
+Edit3.ColorBorder:=tmpcolor.Color;
+Edit4.ColorBorder:=tmpcolor.Color;
+Edit5.ColorBorder:=tmpcolor.Color;
+Edit6.ColorBorder:=tmpcolor.Color;
+Edit7.ColorBorder:=tmpcolor.Color;
+Edit8.ColorBorder:=tmpcolor.Color;
+Edit9.ColorBorder:=tmpcolor.Color;
+Edit10.ColorBorder:=tmpcolor.Color;
+Edit11.ColorBorder:=tmpcolor.Color;
+Edit12.ColorBorder:=tmpcolor.Color;
+Flatbutton1.ColorBorder:=tmpcolor.Color;
+Flatbutton2.ColorBorder:=tmpcolor.Color;
+Flatbutton3.ColorBorder:=tmpcolor.Color;
+Flatbutton4.ColorBorder:=tmpcolor.Color;
+Flatbutton5.ColorBorder:=tmpcolor.Color;
+Flatbutton6.ColorBorder:=tmpcolor.Color;
+memo1.ColorBorder:=tmpcolor.Color;
+
 end;
 
 procedure TForm1.SetLabelFont(Font:TFont);
@@ -1008,5 +1013,7 @@ memo1.Font.Color:= ClBlack;
 end else
 memo1.Font.Color:= ClWhite;
 end;
+
+
 
 end.
