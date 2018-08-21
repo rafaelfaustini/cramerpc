@@ -612,7 +612,7 @@ procedure TForm1.FlatButton5Click(Sender: TObject);
 var
 tmpcolor:TColorDialog;
 begin
-
+tmpcolor := TColorDialog.Create(nil);
 tmpcolor.Execute;
 Form1.color:=tmpcolor.Color;
 Edit1.ColorFlat:=tmpcolor.Color;
@@ -642,6 +642,7 @@ procedure TForm1.FlatButton4Click(Sender: TObject);
 var
 tmpcolor:TColorDialog;
 begin
+tmpcolor := TColorDialog.Create(nil);
 tmpcolor.Execute;
 Edit1.ColorBorder:=tmpcolor.Color;
 Edit2.ColorBorder:=tmpcolor.Color;
