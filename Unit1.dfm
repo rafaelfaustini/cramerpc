@@ -490,6 +490,9 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 12
+    OnEnter = Memo1Enter
+    OnExit = Memo1Exit
+    OnMouseMove = Memo1MouseMove
   end
   object Button1: TFlatButton
     Left = 664

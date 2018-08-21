@@ -128,6 +128,11 @@ type
     procedure SetLabelFont(Font:TFont);
     procedure SetButtonFont(Font:TFont);
     procedure ToggleFlatButton(from:integer;tof:integer);
+    procedure Memo1Enter(Sender: TObject);
+    procedure Memo1Exit(Sender: TObject);
+
+    procedure Memo1MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
 
   private
     { Private declarations }
@@ -980,6 +985,28 @@ end;
 procedure TForm1.FlatEdit3Enter(Sender: TObject);
 begin
 edit1.Font.Color:= ClBlack;
+end;
+
+procedure TForm1.Memo1Enter(Sender: TObject);
+begin
+Memo1.Font.Color:= ClBlack;
+end;
+
+procedure TForm1.Memo1Exit(Sender: TObject);
+begin
+Memo1.Font.Color:= ClWhite;
+end;
+
+
+
+procedure TForm1.Memo1MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+if(memo1.Font.Color = ClWhite)then
+begin
+memo1.Font.Color:= ClBlack;
+end else
+memo1.Font.Color:= ClWhite;
 end;
 
 end.
