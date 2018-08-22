@@ -794,11 +794,6 @@ object Form1: TForm1
     Left = 96
     Top = 528
   end
-  object Timer6: TTimer
-    OnTimer = Timer6Timer
-    Left = 96
-    Top = 408
-  end
   object Timer7: TTimer
     Interval = 1
     OnTimer = Timer7Timer

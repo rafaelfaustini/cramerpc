@@ -62,7 +62,6 @@ type
     Label18: TLabel;
     Label19: TLabel;
     RadioButton3: TRadioButton;
-    Timer6: TTimer;
     Timer7: TTimer;
     procedure Button1Click(Sender: TObject);
     procedure Edit1Exit(Sender: TObject);
@@ -114,7 +113,6 @@ type
     procedure Timer5Timer(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Timer7Timer(Sender: TObject);
-    procedure Timer6Timer(Sender: TObject);
     procedure FlatEdit1Enter(Sender: TObject);
     procedure FlatEdit2Enter(Sender: TObject);
     procedure FlatEdit3Enter(Sender: TObject);
@@ -417,20 +415,44 @@ end;
 procedure TForm1.Edit10Exit(Sender: TObject);
 begin
 edit10.Font.Color:= clWhite;
+if (radiobutton3.Checked= true) and (flatedit1.Text<>'')and(flatedit2.Text<>'')and(flatedit3.Text<>'')then
+begin
+button1.Enabled:=true
+end
+else
+button1.Enabled:=false;
 end;
 
 procedure TForm1.Edit4Exit(Sender: TObject);
 begin
 edit4.Font.Color:= clWhite;
+if (radiobutton3.Checked= true) and (flatedit1.Text<>'')and(flatedit2.Text<>'')and(flatedit3.Text<>'')then
+begin
+button1.Enabled:=true
+end
+else
+button1.Enabled:=false;
 end;
 
 procedure TForm1.Edit5Exit(Sender: TObject);
 begin
 edit5.Font.Color:= clWhite;
+if (radiobutton3.Checked= true) and (flatedit1.Text<>'')and(flatedit2.Text<>'')and(flatedit3.Text<>'')then
+begin
+button1.Enabled:=true
+end
+else
+button1.Enabled:=false;
 end;
 
 procedure TForm1.Edit6Exit(Sender: TObject);
 begin
+if (radiobutton3.Checked= true) and (flatedit1.Text<>'')and(flatedit2.Text<>'')and(flatedit3.Text<>'')then
+begin
+button1.Enabled:=true
+end
+else
+button1.Enabled:=false;
 edit6.Font.Color:= clWhite;
 end;
 
@@ -855,16 +877,6 @@ if radiobutton2.Checked=true then
 begin
 
 end;
-end;
-
-procedure TForm1.Timer6Timer(Sender: TObject);
-begin
-if (radiobutton3.Checked= true) and (flatedit1.Text<>'')and(flatedit2.Text<>'')and(flatedit3.Text<>'')then
-begin
-button1.Enabled:=true
-end
-else
-button1.Enabled:=false;
 end;
 
 procedure TForm1.FlatEdit1Enter(Sender: TObject);
