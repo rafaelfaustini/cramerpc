@@ -273,6 +273,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    OnChange = Edit1Change
     OnEnter = Edit1Enter
     OnExit = Edit1Exit
     OnKeyPress = Edit1KeyPress
@@ -291,6 +292,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    OnChange = Edit2Change
     OnEnter = Edit2Enter
     OnExit = Edit2Exit
     OnKeyPress = Edit2KeyPress
@@ -309,6 +311,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    OnChange = Edit3Change
     OnEnter = Edit3Enter
     OnExit = Edit3Exit
     OnKeyPress = Edit3KeyPress
@@ -327,6 +330,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnChange = Edit4Change
     OnEnter = Edit4Enter
     OnExit = Edit4Exit
     OnKeyPress = Edit4KeyPress
@@ -345,6 +349,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 4
+    OnChange = Edit5Change
     OnEnter = Edit5Enter
     OnExit = Edit5Exit
     OnKeyPress = Edit5KeyPress
@@ -363,6 +368,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    OnChange = Edit6Change
     OnEnter = Edit6Enter
     OnExit = Edit6Exit
     OnKeyPress = Edit6KeyPress
@@ -381,6 +387,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 6
+    OnChange = Edit7Change
     OnEnter = Edit7Enter
     OnExit = Edit7Exit
     OnKeyPress = Edit7KeyPress
@@ -399,6 +406,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 7
+    OnChange = Edit8Change
     OnEnter = Edit8Enter
     OnExit = Edit8Exit
     OnKeyPress = Edit8KeyPress
@@ -417,6 +425,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 8
+    OnChange = Edit9Change
     OnEnter = Edit9Enter
     OnExit = Edit9Exit
     OnKeyPress = Edit9KeyPress
@@ -435,6 +444,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 9
+    OnChange = Edit10Change
     OnEnter = Edit10Enter
     OnExit = Edit10Exit
     OnKeyPress = Edit10KeyPress
@@ -453,6 +463,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 10
+    OnChange = Edit11Change
     OnEnter = Edit11Enter
     OnExit = Edit11Exit
     OnKeyPress = Edit11KeyPress
@@ -471,6 +482,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 11
+    OnChange = Edit12Change
     OnEnter = Edit12Enter
     OnExit = Edit12Exit
     OnKeyPress = Edit12KeyPress
@@ -704,6 +716,7 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 220
     Visible = False
+    OnChange = FlatEdit1Change
     OnEnter = FlatEdit1Enter
   end
   object FlatEdit2: TFlatEdit
@@ -722,6 +735,7 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 225
     Visible = False
+    OnChange = FlatEdit2Change
     OnEnter = FlatEdit2Enter
   end
   object FlatEdit3: TFlatEdit
@@ -740,6 +754,7 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 230
     Visible = False
+    OnChange = FlatEdit3Change
     OnEnter = FlatEdit3Enter
   end
   object RadioButton3: TRadioButton
@@ -758,41 +773,5 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 235
     OnClick = RadioButton3Click
-  end
-  object FontDialog1: TFontDialog
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    Left = 192
-    Top = 128
-  end
-  object Timer1: TTimer
-    OnTimer = Timer1Timer
-    Left = 96
-    Top = 448
-  end
-  object OpenDialog1: TOpenDialog
-    Filter = 'Bitmap Image File|*.bmp'
-    Left = 320
-    Top = 120
-  end
-  object Timer3: TTimer
-    Interval = 2
-    OnTimer = Timer3Timer
-    Left = 96
-    Top = 488
-  end
-  object Timer5: TTimer
-    OnTimer = Timer5Timer
-    Left = 96
-    Top = 528
-  end
-  object Timer7: TTimer
-    Interval = 1
-    OnTimer = Timer7Timer
-    Left = 104
-    Top = 568
   end
 end

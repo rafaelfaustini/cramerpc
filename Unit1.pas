@@ -43,16 +43,11 @@ type
     FlatButton4: TFlatButton;
     FlatButton5: TFlatButton;
     FlatButton6: TFlatButton;
-    FontDialog1: TFontDialog;
-    Timer1: TTimer;
     Image1: TImage;
     FlatButton8: TFlatButton;
-    OpenDialog1: TOpenDialog;
     FlatButton9: TFlatButton;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
-    Timer3: TTimer;
-    Timer5: TTimer;
     FlatEdit1: TFlatEdit;
     FlatEdit2: TFlatEdit;
     FlatEdit3: TFlatEdit;
@@ -61,7 +56,6 @@ type
     Label18: TLabel;
     Label19: TLabel;
     RadioButton3: TRadioButton;
-    Timer7: TTimer;
     procedure Button1Click(Sender: TObject);
     procedure Edit1Exit(Sender: TObject);
     procedure Edit2Exit(Sender: TObject);
@@ -105,13 +99,10 @@ type
     procedure FlatButton4Click(Sender: TObject);
     procedure FlatButton6Click(Sender: TObject);
     procedure FlatButton3Click(Sender: TObject);
-    procedure Timer1Timer(Sender: TObject);
     procedure FlatButton8Click(Sender: TObject);
     procedure FlatButton9Click(Sender: TObject);
     procedure Timer3Timer(Sender: TObject);
-    procedure Timer5Timer(Sender: TObject);
     procedure Image1Click(Sender: TObject);
-    procedure Timer7Timer(Sender: TObject);
     procedure FlatEdit1Enter(Sender: TObject);
     procedure FlatEdit2Enter(Sender: TObject);
     procedure FlatEdit3Enter(Sender: TObject);
@@ -126,6 +117,22 @@ type
     procedure RadioButton3Click(Sender: TObject);
     procedure RadioButton2Click(Sender: TObject);
     procedure RadioButton1Click(Sender: TObject);
+    procedure EnableButton();
+    procedure Edit1Change(Sender: TObject);
+    procedure Edit2Change(Sender: TObject);
+    procedure Edit3Change(Sender: TObject);
+    procedure Edit10Change(Sender: TObject);
+    procedure Edit4Change(Sender: TObject);
+    procedure Edit5Change(Sender: TObject);
+    procedure Edit6Change(Sender: TObject);
+    procedure Edit11Change(Sender: TObject);
+    procedure Edit7Change(Sender: TObject);
+    procedure Edit8Change(Sender: TObject);
+    procedure Edit9Change(Sender: TObject);
+    procedure Edit12Change(Sender: TObject);
+    procedure FlatEdit1Change(Sender: TObject);
+    procedure FlatEdit2Change(Sender: TObject);
+    procedure FlatEdit3Change(Sender: TObject);
 
 
   private
@@ -244,7 +251,7 @@ dx2:= (r3*b2*c1)+(b3*c2*r1)+(c3*r2*b1);
 dx1:= (r1*b2*c3)+(b1*c2*r3)+(c1*r2*b3);
 dx3:= dx1-(dx2);
 try
- dx := dx3/ d3; // Sendo que o divisor pode ser zero
+ dx := dx3/ d3;
 except
   dx := 0; // Ou seja, se o total for divido por zero, então atribui zero para a variável valor;
 end;
@@ -399,6 +406,7 @@ end;
 procedure TForm1.Edit1Exit(Sender: TObject);
 begin
 edit1.Font.Color:= clWhite;
+
 end;
 
 procedure TForm1.Edit2Exit(Sender: TObject);
@@ -496,61 +504,73 @@ end;
 procedure TForm1.Edit1KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit1.Text );
+
 end;
 
 procedure TForm1.Edit2KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit2.Text );
+
 end;
 
 procedure TForm1.Edit3KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit3.Text );
+
 end;
 
 procedure TForm1.Edit10KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit10.Text );
+
 end;
 
 procedure TForm1.Edit4KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit4.Text );
+
 end;
 
 procedure TForm1.Edit5KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit5.Text );
+
 end;
 
 procedure TForm1.Edit6KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit6.Text );
+
 end;
 
 procedure TForm1.Edit11KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit11.Text );
+
 end;
 
 procedure TForm1.Edit7KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit7.Text );
+
 end;
 
 procedure TForm1.Edit8KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit8.Text );
+
 end;
 
 procedure TForm1.Edit9KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit9.Text );
+
 end;
 
 procedure TForm1.Edit12KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit12.Text );
+
 end;
 
 procedure TForm1.FlatButton2Click(Sender: TObject);
@@ -689,6 +709,23 @@ memo1.ColorBorder:=tmpcolor.Color;
 
 end;
 
+procedure TForm1.EnableButton();
+var
+i:integer;
+trigger:boolean;
+begin
+  trigger:= true;
+  for i := 0 to ComponentCount - 1 do
+    if Components[i] is TFlatEdit then
+      if TFlatEdit(Components[i]).Visible=true then
+        if TFlatEdit(Components[i]).Text = '' then
+        begin
+        trigger := false;
+        end;
+
+Button1.Enabled:= trigger;
+end;
+
 procedure TForm1.SetLabelFont(Font:TFont);
 var
 i:integer;
@@ -767,20 +804,11 @@ ToggleFlatButton(4,9);
 
 end;
 
-procedure TForm1.Timer1Timer(Sender: TObject);
-begin
-if radiobutton1.Checked= true and (edit1.Text<>'')and(edit2.Text<>'')and(edit3.Text<>'')and(edit4.Text<>'')and(edit5.Text<>'')and(edit6.Text<>'')and(edit7.Text<>'')and(edit8.Text<>'')and(edit9.Text<>'')and(edit10.Text<>'')and(edit11.Text<>'')and(edit12.Text<>'')then
-begin
-button1.Enabled:=true;
-end
-else
-button1.Enabled:=false;
-end;
 procedure TForm1.FlatButton8Click(Sender: TObject);
 var
 tmp:TOpenDialog;
 begin
-tmp := TOpenDialog.Create(nil);
+tmp := TOpenDialog.Create(self);
 if tmp.Execute then
   begin
     image1.Visible:=true;
@@ -857,16 +885,6 @@ label11.Left:=696;
 end;
 end;
 
-procedure TForm1.Timer5Timer(Sender: TObject);
-begin
-if (radiobutton2.Checked= true) and (edit1.Text<>'')and(edit2.Text<>'')and(edit4.Text<>'')and(edit5.Text<>'')and(edit6.Text<>'')and(edit10.Text<>'')and(edit11.Text<>'') then
-begin
-button1.Enabled:=true
-end
-else
-button1.Enabled:=false;
-end;
-
 procedure TForm1.Image1Click(Sender: TObject);
 begin
 if (radiobutton3.Checked= true) and (edit1.Text<>'')and(edit2.Text<>'')and(edit4.Text<>'')and(edit5.Text<>'')and(edit10.Text<>'')and(edit11.Text<>'') then
@@ -877,14 +895,6 @@ else
 button1.Enabled:=false;
 end;
 
-
-procedure TForm1.Timer7Timer(Sender: TObject);
-begin
-if radiobutton2.Checked=true then
-begin
-
-end;
-end;
 
 procedure TForm1.FlatEdit1Enter(Sender: TObject);
 begin
@@ -927,6 +937,7 @@ end;
 
 procedure TForm1.RadioButton3Click(Sender: TObject);
 begin
+button1.Enabled:=false;
 edit7.Visible:= false;
 label7.Visible:= false;
 edit8.Visible:= false;
@@ -978,6 +989,7 @@ end;
 
 procedure TForm1.RadioButton2Click(Sender: TObject);
 begin
+button1.Enabled:=false;
 edit7.Visible:= false;
 label7.Visible:= false;
 edit8.Visible:= false;
@@ -1033,6 +1045,7 @@ end;
 
 procedure TForm1.RadioButton1Click(Sender: TObject);
 begin
+button1.Enabled:=false;
 flatedit1.top:=288;
 flatedit2.top:=288;
 flatedit3.top:=288;
@@ -1048,6 +1061,88 @@ label17.Visible:=false;
 label18.Visible:=false;
 label19.Visible:=false;
 form1.Caption:='REGRA DE CRAMER BY: RAFAELFAUSTINI';
+
+if radiobutton1.Checked= true and (edit1.Text<>'')and(edit2.Text<>'')and(edit3.Text<>'')and(edit4.Text<>'')and(edit5.Text<>'')and(edit6.Text<>'')and(edit7.Text<>'')and(edit8.Text<>'')and(edit9.Text<>'')and(edit10.Text<>'')and(edit11.Text<>'')and(edit12.Text<>'')then
+begin
+button1.Enabled:=true;
+end
+else
+button1.Enabled:=false;
+end;
+
+procedure TForm1.Edit1Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit2Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit3Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit10Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit4Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit5Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit6Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit11Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit7Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit8Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit9Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.Edit12Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.FlatEdit1Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.FlatEdit2Change(Sender: TObject);
+begin
+EnableButton();
+end;
+
+procedure TForm1.FlatEdit3Change(Sender: TObject);
+begin
+EnableButton();
 end;
 
 end.
