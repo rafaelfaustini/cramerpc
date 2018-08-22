@@ -759,11 +759,6 @@ object Form1: TForm1
     TabOrder = 235
     OnClick = RadioButton3Click
   end
-  object SaveDialog1: TSaveDialog
-    Filter = '.txt'
-    Left = 96
-    Top = 232
-  end
   object FontDialog1: TFontDialog
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

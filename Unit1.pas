@@ -38,7 +38,6 @@ type
     Memo1: TFlatMemo;
     Button1: TFlatButton;
     FlatButton1: TFlatButton;
-    SaveDialog1: TSaveDialog;
     FlatButton2: TFlatButton;
     FlatButton3: TFlatButton;
     FlatButton4: TFlatButton;
@@ -482,10 +481,14 @@ edit12.Font.Color:= clWhite;
 end;
 
 procedure TForm1.FlatButton1Click(Sender: TObject);
+var
+tmp:TSaveDialog;
 begin
-if SaveDialog1.Execute then
+tmp:= TSaveDialog.Create(nil);
+tmp.Filter:= '.txt';
+if tmp.Execute then
   begin
-    Memo1.Lines.SaveToFile(SaveDialog1.FileName);
+    Memo1.Lines.SaveToFile(tmp.FileName);
   end;
 
 end;
@@ -708,14 +711,18 @@ end;
 procedure TForm1.FlatButton6Click(Sender: TObject);
 var
 i:integer;
+tmp:TFontDialog;
 begin
-FontDialog1.Execute;
+tmp:= TFontDialog.Create(self);
+tmp.Execute;
 
-SetLabelFont(FontDialog1.Font);
-SetButtonFont(FontDialog1.Font);
+SetLabelFont(tmp.Font);
+SetButtonFont(tmp.Font);
 
 
-memo1.Font:=FontDialog1.Font;
+memo1.Font:=tmp.Font;
+
+tmp.Free;
 end;
 
 function contem(name:string;from:integer;tof:integer):boolean;
