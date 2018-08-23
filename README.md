@@ -6,4 +6,4 @@ Snizer Cramer is an application to help you student with some math equations suc
 
 # Snizer Cramer PC
 ![alt text](https://i.imgur.com/qKkYeCW.png)
-Snizer Cramer PC, is a project created in 2013 in order to test code to implement in the android version. After years without updating, I created this repository, so that others can contribute to improve this application since I wasn't updating. 
+Snizer Cramer PC, is a project created in 2013 in order to test code to implement in the android version. After years without updating, I created this repository, so that others can contribute to improve this application since I wasn't updating it. 
