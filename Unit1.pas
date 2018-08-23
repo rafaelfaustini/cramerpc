@@ -21,7 +21,6 @@ type
     Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
-    Label13: TLabel;
     Label14: TLabel;
     Edit1: TFlatEdit;
     Edit2: TFlatEdit;

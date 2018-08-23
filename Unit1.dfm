@@ -16,8 +16,8 @@ object Form1: TForm1
   object Image1: TImage
     Left = 0
     Top = 0
-    Width = 1257
-    Height = 635
+    Width = 1274
+    Height = 633
     Align = alClient
     OnClick = Image1Click
   end
@@ -174,19 +174,6 @@ object Form1: TForm1
     Font.Color = clWhite
     Font.Height = -24
     Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label13: TLabel
-    Left = 8
-    Top = 600
-    Width = 305
-    Height = 35
-    Caption = 'Feito POR RAFAEL FAUSTINI'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWhite
-    Font.Height = -24
-    Font.Name = 'Overpass Light'
     Font.Style = []
     ParentFont = False
   end
@@ -512,7 +499,7 @@ object Form1: TForm1
     Width = 169
     Height = 25
     ColorBorder = clWhite
-    Caption = 'Calcular'
+    Caption = 'Calculate'
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
@@ -530,7 +517,7 @@ object Form1: TForm1
     Height = 25
     Color = clGray
     ColorBorder = clWhite
-    Caption = 'Salvar'
+    Caption = 'Save'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -547,7 +534,7 @@ object Form1: TForm1
     Width = 81
     Height = 25
     ColorBorder = clWhite
-    Caption = 'Limpar Tudo'
+    Caption = 'Clear'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -564,7 +551,7 @@ object Form1: TForm1
     Height = 25
     Color = clGray
     ColorBorder = clWhite
-    Caption = 'Personalizar'
+    Caption = 'Customize'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -582,7 +569,7 @@ object Form1: TForm1
     Height = 25
     Color = clGray
     ColorBorder = clWhite
-    Caption = 'Bordas'
+    Caption = 'Outlines'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -601,7 +588,7 @@ object Form1: TForm1
     Height = 25
     Color = clGray
     ColorBorder = clWhite
-    Caption = 'Fundo'
+    Caption = 'Background'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -619,7 +606,7 @@ object Form1: TForm1
     Width = 81
     Height = 25
     ColorBorder = clWhite
-    Caption = 'Fonte'
+    Caption = 'Font'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -636,7 +623,7 @@ object Form1: TForm1
     Width = 81
     Height = 25
     ColorBorder = clRed
-    Caption = 'Imagem Fundo'
+    Caption = 'Bg Image'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -11
@@ -653,7 +640,7 @@ object Form1: TForm1
     Width = 81
     Height = 25
     ColorBorder = clWhite
-    Caption = 'Resetar'
+    Caption = 'Reset Default'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -669,7 +656,7 @@ object Form1: TForm1
     Top = 8
     Width = 113
     Height = 17
-    Caption = '3 Variaveis'
+    Caption = '3x3 System'
     Checked = True
     Color = clGray
     Font.Charset = ANSI_CHARSET
@@ -688,7 +675,7 @@ object Form1: TForm1
     Top = 24
     Width = 113
     Height = 17
-    Caption = '2 Variaveis'
+    Caption = '2 variables equation'
     Color = clGray
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
@@ -762,7 +749,7 @@ object Form1: TForm1
     Top = 40
     Width = 113
     Height = 17
-    Caption = '2'#186' Grau'
+    Caption = '2'#186' Degree'
     Color = clGray
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
