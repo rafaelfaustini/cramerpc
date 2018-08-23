@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, TFlatButtonUnit, TFlatMemoUnit, TFlatEditUnit,
-  ExtCtrls, XPMan, TFlatCheckBoxUnit, CSelectOnRunTime, StrUtils;
+  ExtCtrls, XPMan, TFlatCheckBoxUnit, CSelectOnRunTime, StrUtils, Jpeg;
 
 type
   TForm1 = class(TForm)
@@ -809,6 +809,9 @@ var
 tmp:TOpenDialog;
 begin
 tmp := TOpenDialog.Create(self);
+tmp.DefaultExt := '*.jpg;*.jpeg;*.bmp';
+tmp.Filter:= 'JPG|*.jpg|Jpeg|*.jpeg|Bmp|*.bmp';
+
 if tmp.Execute then
   begin
     image1.Visible:=true;

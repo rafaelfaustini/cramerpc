@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 358
-  Top = 167
+  Left = 506
+  Top = 222
   Width = 1290
   Height = 672
   Caption = 'REGRA DE CRAMER BY:RAFAELFAUSTINI'
@@ -193,9 +193,9 @@ object Form1: TForm1
   object Label14: TLabel
     Left = 464
     Top = 8
-    Width = 126
+    Width = 184
     Height = 32
-    Caption = 'Vers'#227'o 2.0.0'
+    Caption = 'Snizer Cramer PC'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -24
