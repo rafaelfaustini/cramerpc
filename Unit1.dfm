@@ -18,9 +18,9 @@ object Form1: TForm1
   TextHeight = 13
   object Image1: TImage
     Left = 0
-    Top = 0
+    Top = 49
     Width = 1361
-    Height = 651
+    Height = 602
     Align = alClient
     OnClick = Image1Click
   end
@@ -173,19 +173,6 @@ object Form1: TForm1
     Width = 16
     Height = 32
     Caption = '='
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWhite
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label14: TLabel
-    Left = 464
-    Top = 8
-    Width = 184
-    Height = 32
-    Caption = 'Snizer Cramer PC'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -24
@@ -478,8 +465,8 @@ object Form1: TForm1
     OnKeyPress = Edit12KeyPress
   end
   object Memo1: TFlatMemo
-    Left = 936
-    Top = 33
+    Left = 944
+    Top = 57
     Width = 400
     Height = 570
     ColorBorder = clWhite
@@ -498,7 +485,7 @@ object Form1: TForm1
     Anchors = [akLeft, akTop, akRight, akBottom]
   end
   object Button1: TFlatButton
-    Left = 416
+    Left = 512
     Top = 336
     Width = 169
     Height = 41
@@ -519,8 +506,8 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object FlatButton1: TFlatButton
-    Left = 792
-    Top = 520
+    Left = 784
+    Top = 360
     Width = 137
     Height = 28
     Color = clGray
@@ -538,8 +525,8 @@ object Form1: TForm1
     Anchors = [akLeft, akTop, akRight, akBottom]
   end
   object FlatButton2: TFlatButton
-    Left = 792
-    Top = 456
+    Left = 360
+    Top = 336
     Width = 137
     Height = 41
     Color = 4876543
@@ -558,7 +545,7 @@ object Form1: TForm1
   end
   object FlatButton3: TFlatButton
     Left = 0
-    Top = 0
+    Top = 56
     Width = 81
     Height = 25
     Color = clGray
@@ -576,7 +563,7 @@ object Form1: TForm1
   end
   object FlatButton4: TFlatButton
     Left = 0
-    Top = 32
+    Top = 88
     Width = 81
     Height = 25
     Color = clGray
@@ -595,7 +582,7 @@ object Form1: TForm1
   end
   object FlatButton5: TFlatButton
     Left = 0
-    Top = 64
+    Top = 120
     Width = 81
     Height = 25
     Color = clGray
@@ -614,7 +601,7 @@ object Form1: TForm1
   end
   object FlatButton6: TFlatButton
     Left = 0
-    Top = 128
+    Top = 184
     Width = 81
     Height = 25
     ColorBorder = clWhite
@@ -631,7 +618,7 @@ object Form1: TForm1
   end
   object FlatButton8: TFlatButton
     Left = 0
-    Top = 96
+    Top = 152
     Width = 81
     Height = 25
     ColorBorder = clRed
@@ -648,7 +635,7 @@ object Form1: TForm1
   end
   object FlatButton9: TFlatButton
     Left = 0
-    Top = 160
+    Top = 216
     Width = 81
     Height = 25
     ColorBorder = clWhite
@@ -665,7 +652,7 @@ object Form1: TForm1
   end
   object RadioButton1: TRadioButton
     Left = 88
-    Top = 8
+    Top = 56
     Width = 113
     Height = 17
     Caption = '3x3 System'
@@ -684,7 +671,7 @@ object Form1: TForm1
   end
   object RadioButton2: TRadioButton
     Left = 88
-    Top = 24
+    Top = 72
     Width = 121
     Height = 17
     Caption = '2 variables equation'
@@ -758,7 +745,7 @@ object Form1: TForm1
   end
   object RadioButton3: TRadioButton
     Left = 88
-    Top = 40
+    Top = 88
     Width = 113
     Height = 17
     Caption = '2'#186' Degree'
@@ -772,5 +759,23 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 27
     OnClick = RadioButton3Click
+  end
+  object FlatPanel1: TFlatPanel
+    Left = 0
+    Top = 0
+    Width = 1361
+    Height = 49
+    Caption = 'Snizer Cramer PC'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -24
+    Font.Name = 'Roboto'
+    Font.Style = []
+    Color = 13408512
+    ColorHighLight = 13408512
+    ColorShadow = clBlack
+    Align = alTop
+    TabOrder = 28
+    UseDockManager = True
   end
 end

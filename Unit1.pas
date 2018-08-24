@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, TFlatButtonUnit, TFlatMemoUnit, TFlatEditUnit,
   ExtCtrls, XPMan, TFlatCheckBoxUnit, CSelectOnRunTime, StrUtils, Jpeg,
-  TFlatAnimWndUnit;
+  TFlatAnimWndUnit, TFlatPanelUnit;
 
 type
   TForm1 = class(TForm)
@@ -22,7 +22,6 @@ type
     Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
-    Label14: TLabel;
     a1: TFlatEdit;
     Edit2: TFlatEdit;
     Edit3: TFlatEdit;
@@ -56,6 +55,7 @@ type
     Label18: TLabel;
     Label19: TLabel;
     RadioButton3: TRadioButton;
+    FlatPanel1: TFlatPanel;
     procedure Button1Click(Sender: TObject);
     procedure a1Exit(Sender: TObject);
     procedure Edit2Exit(Sender: TObject);
