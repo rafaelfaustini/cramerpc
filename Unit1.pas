@@ -22,7 +22,7 @@ type
     Label11: TLabel;
     Label12: TLabel;
     Label14: TLabel;
-    Edit1: TFlatEdit;
+    a1: TFlatEdit;
     Edit2: TFlatEdit;
     Edit3: TFlatEdit;
     Edit4: TFlatEdit;
@@ -56,7 +56,7 @@ type
     Label19: TLabel;
     RadioButton3: TRadioButton;
     procedure Button1Click(Sender: TObject);
-    procedure Edit1Exit(Sender: TObject);
+    procedure a1Exit(Sender: TObject);
     procedure Edit2Exit(Sender: TObject);
     procedure Edit3Exit(Sender: TObject);
     procedure Edit10Exit(Sender: TObject);
@@ -69,7 +69,7 @@ type
     procedure Edit9Exit(Sender: TObject);
     procedure Edit12Exit(Sender: TObject);
     procedure FlatButton1Click(Sender: TObject);
-    procedure Edit1KeyPress(Sender: TObject; var Key: Char);
+    procedure a1KeyPress(Sender: TObject; var Key: Char);
     procedure Edit2KeyPress(Sender: TObject; var Key: Char);
     procedure Edit3KeyPress(Sender: TObject; var Key: Char);
     procedure Edit10KeyPress(Sender: TObject; var Key: Char);
@@ -82,7 +82,7 @@ type
     procedure Edit9KeyPress(Sender: TObject; var Key: Char);
     procedure Edit12KeyPress(Sender: TObject; var Key: Char);
     procedure FlatButton2Click(Sender: TObject);
-    procedure Edit1Enter(Sender: TObject);
+    procedure a1Enter(Sender: TObject);
     procedure Edit2Enter(Sender: TObject);
     procedure Edit3Enter(Sender: TObject);
     procedure Edit10Enter(Sender: TObject);
@@ -117,7 +117,7 @@ type
     procedure RadioButton2Click(Sender: TObject);
     procedure RadioButton1Click(Sender: TObject);
     procedure EnableButton();
-    procedure Edit1Change(Sender: TObject);
+    procedure a1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);
     procedure Edit3Change(Sender: TObject);
     procedure Edit10Change(Sender: TObject);
@@ -231,6 +231,15 @@ Begin
 if radiobutton1.Checked=true then
 begin
 Data:= Now;
+d1:= StrToFloat(edit1.Text)*StrToFloat(edit5.Text)*StrtoFloat(edit9.Text);   // a1*b2*c3
+d1 := d1+(StrToFloat(edit2.text)*StrToFloat(edit6.text)*StrToFloat(edit7.text)); //+= b1*c2*a3
+d1 := d1+(StrToFloat(edit3.text)*StrToFloat(edit4.text)*StrToFloat(edit8.text); // += c1*a2*b3
+
+
+
+
+
+
 a1:= StrToFloat(edit1.text);
 b1:= StrToFloat(edit2.text);
 c1:= StrToFloat(edit3.text);
@@ -402,7 +411,7 @@ end else
 showmessage('Houve um erro ao fazer o cálculo');
 end;
 end;
-procedure TForm1.Edit1Exit(Sender: TObject);
+procedure TForm1.a1Exit(Sender: TObject);
 begin
 edit1.Font.Color:= clWhite;
 
@@ -500,7 +509,7 @@ if tmp.Execute then
 
 end;
 
-procedure TForm1.Edit1KeyPress(Sender: TObject; var Key: Char);
+procedure TForm1.a1KeyPress(Sender: TObject; var Key: Char);
 begin
 Key := Ret_Numero( Key, Edit1.Text );
 
@@ -590,7 +599,7 @@ edit12.Clear;
 memo1.Clear;
 end;
 
-procedure TForm1.Edit1Enter(Sender: TObject);
+procedure TForm1.a1Enter(Sender: TObject);
 begin
 edit1.Font.Color:= ClBlack;
 end;
@@ -1072,7 +1081,7 @@ else
 button1.Enabled:=false;
 end;
 
-procedure TForm1.Edit1Change(Sender: TObject);
+procedure TForm1.a1Change(Sender: TObject);
 begin
 EnableButton();
 end;

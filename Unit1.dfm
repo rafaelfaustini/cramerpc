@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 506
-  Top = 222
+  Left = 348
+  Top = 332
   Width = 1290
   Height = 672
   Caption = 'REGRA DE CRAMER BY:RAFAELFAUSTINI'
@@ -246,7 +246,7 @@ object Form1: TForm1
     ParentFont = False
     Visible = False
   end
-  object Edit1: TFlatEdit
+  object a1: TFlatEdit
     Left = 232
     Top = 192
     Width = 121
@@ -260,10 +260,10 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    OnChange = Edit1Change
-    OnEnter = Edit1Enter
-    OnExit = Edit1Exit
-    OnKeyPress = Edit1KeyPress
+    OnChange = a1Change
+    OnEnter = a1Enter
+    OnExit = a1Exit
+    OnKeyPress = a1KeyPress
   end
   object Edit2: TFlatEdit
     Left = 392
@@ -666,14 +666,14 @@ object Form1: TForm1
     Font.Style = []
     ParentColor = False
     ParentFont = False
-    TabOrder = 208
+    TabOrder = 22
     TabStop = True
     OnClick = RadioButton1Click
   end
   object RadioButton2: TRadioButton
     Left = 88
     Top = 24
-    Width = 113
+    Width = 121
     Height = 17
     Caption = '2 variables equation'
     Color = clGray
@@ -684,7 +684,7 @@ object Form1: TForm1
     Font.Style = []
     ParentColor = False
     ParentFont = False
-    TabOrder = 215
+    TabOrder = 23
     OnClick = RadioButton2Click
   end
   object FlatEdit1: TFlatEdit
@@ -701,7 +701,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 220
+    TabOrder = 24
     Visible = False
     OnChange = FlatEdit1Change
     OnEnter = FlatEdit1Enter
@@ -720,7 +720,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 225
+    TabOrder = 25
     Visible = False
     OnChange = FlatEdit2Change
     OnEnter = FlatEdit2Enter
@@ -739,7 +739,7 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 230
+    TabOrder = 26
     Visible = False
     OnChange = FlatEdit3Change
     OnEnter = FlatEdit3Enter
@@ -758,7 +758,7 @@ object Form1: TForm1
     Font.Style = []
     ParentColor = False
     ParentFont = False
-    TabOrder = 235
+    TabOrder = 27
     OnClick = RadioButton3Click
   end
 end
