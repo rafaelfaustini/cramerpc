@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 348
-  Top = 332
-  Width = 1290
-  Height = 672
+  Left = 331
+  Top = 234
+  Width = 1377
+  Height = 690
   Caption = 'REGRA DE CRAMER BY:RAFAELFAUSTINI'
   Color = clGray
   Font.Charset = DEFAULT_CHARSET
@@ -11,13 +11,16 @@ object Form1: TForm1
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  DesignSize = (
+    1361
+    651)
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
     Left = 0
     Top = 0
-    Width = 1274
-    Height = 633
+    Width = 1361
+    Height = 651
     Align = alClient
     OnClick = Image1Click
   end
@@ -205,7 +208,7 @@ object Form1: TForm1
     Visible = False
   end
   object Label17: TLabel
-    Left = 528
+    Left = 520
     Top = 280
     Width = 14
     Height = 32
@@ -219,7 +222,7 @@ object Form1: TForm1
     Visible = False
   end
   object Label18: TLabel
-    Left = 680
+    Left = 672
     Top = 280
     Width = 16
     Height = 32
@@ -233,7 +236,7 @@ object Form1: TForm1
     Visible = False
   end
   object Label19: TLabel
-    Left = 704
+    Left = 696
     Top = 280
     Width = 13
     Height = 32
@@ -476,9 +479,9 @@ object Form1: TForm1
   end
   object Memo1: TFlatMemo
     Left = 936
-    Top = 8
-    Width = 313
-    Height = 593
+    Top = 33
+    Width = 400
+    Height = 570
     ColorBorder = clWhite
     ColorFlat = clGray
     ParentColor = True
@@ -492,29 +495,34 @@ object Form1: TForm1
     OnEnter = Memo1Enter
     OnExit = Memo1Exit
     OnMouseMove = Memo1MouseMove
+    Anchors = [akLeft, akTop, akRight, akBottom]
   end
   object Button1: TFlatButton
     Left = 416
-    Top = 344
+    Top = 336
     Width = 169
-    Height = 25
-    ColorBorder = clWhite
+    Height = 41
+    Color = 15963681
+    ColorFocused = clWhite
+    ColorDown = clWhite
+    ColorBorder = 15963681
     Caption = 'Calculate'
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
-    Font.Height = -13
-    Font.Name = 'Segoe UI'
+    Font.Height = -21
+    Font.Name = 'Roboto Cn'
     Font.Style = []
     ParentFont = False
+    ParentColor = False
     TabOrder = 13
     OnClick = Button1Click
   end
   object FlatButton1: TFlatButton
-    Left = 936
-    Top = 608
-    Width = 97
-    Height = 25
+    Left = 792
+    Top = 520
+    Width = 137
+    Height = 28
     Color = clGray
     ColorBorder = clWhite
     Caption = 'Save'
@@ -527,22 +535,26 @@ object Form1: TForm1
     ParentColor = False
     TabOrder = 14
     OnClick = FlatButton1Click
+    Anchors = [akLeft, akTop, akRight, akBottom]
   end
   object FlatButton2: TFlatButton
-    Left = 1040
-    Top = 608
-    Width = 81
-    Height = 25
-    ColorBorder = clWhite
+    Left = 792
+    Top = 456
+    Width = 137
+    Height = 41
+    Color = 4876543
+    ColorBorder = 4876543
     Caption = 'Clear'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
-    Font.Height = -13
-    Font.Name = 'Segoe UI'
+    Font.Height = -20
+    Font.Name = 'Roboto'
     Font.Style = []
     ParentFont = False
+    ParentColor = False
     TabOrder = 15
     OnClick = FlatButton2Click
+    Anchors = [akLeft, akTop, akRight, akBottom]
   end
   object FlatButton3: TFlatButton
     Left = 0
@@ -707,7 +719,7 @@ object Form1: TForm1
     OnEnter = FlatEdit1Enter
   end
   object FlatEdit2: TFlatEdit
-    Left = 400
+    Left = 392
     Top = 288
     Width = 121
     Height = 23
@@ -726,7 +738,7 @@ object Form1: TForm1
     OnEnter = FlatEdit2Enter
   end
   object FlatEdit3: TFlatEdit
-    Left = 552
+    Left = 544
     Top = 288
     Width = 121
     Height = 23

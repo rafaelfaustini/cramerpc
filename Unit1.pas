@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, TFlatButtonUnit, TFlatMemoUnit, TFlatEditUnit,
-  ExtCtrls, XPMan, TFlatCheckBoxUnit, CSelectOnRunTime, StrUtils, Jpeg;
+  ExtCtrls, XPMan, TFlatCheckBoxUnit, CSelectOnRunTime, StrUtils, Jpeg,
+  TFlatAnimWndUnit;
 
 type
   TForm1 = class(TForm)
@@ -100,7 +101,6 @@ type
     procedure FlatButton3Click(Sender: TObject);
     procedure FlatButton8Click(Sender: TObject);
     procedure FlatButton9Click(Sender: TObject);
-    procedure Timer3Timer(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure FlatEdit1Enter(Sender: TObject);
     procedure FlatEdit2Enter(Sender: TObject);
@@ -225,22 +225,17 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 var
-a1,b1,c1,d1,d2,d3,D,a2,b2,c2,a3,b3,c3,dx,dx1,dx2,dx3,dy,dy1,dy2,dy3,dz1,dz2,dz3,dz,r1,r2,r3,delta,a,b,c,x1,x2 : real;
+b1,c1,d1,d2,d3,D,a2,b2,c2,a3,b3,c3,dx,dx1,dx2,dx3,dy,dy1,dy2,dy3,dz1,dz2,dz3,dz,r1,r2,r3,delta,a,b,c,x1,x2 : real;
 Data: TDateTime;
 Begin
 if radiobutton1.Checked=true then
 begin
 Data:= Now;
-d1:= StrToFloat(edit1.Text)*StrToFloat(edit5.Text)*StrtoFloat(edit9.Text);   // a1*b2*c3
+d1:= StrToFloat(a1.Text)*StrToFloat(edit5.Text)*StrtoFloat(edit9.Text);   // a1*b2*c3
 d1 := d1+(StrToFloat(edit2.text)*StrToFloat(edit6.text)*StrToFloat(edit7.text)); //+= b1*c2*a3
-d1 := d1+(StrToFloat(edit3.text)*StrToFloat(edit4.text)*StrToFloat(edit8.text); // += c1*a2*b3
+d1 := d1+(StrToFloat(edit3.text)*StrToFloat(edit4.text)*StrToFloat(edit8.text)); // += c1*a2*b3
 
 
-
-
-
-
-a1:= StrToFloat(edit1.text);
 b1:= StrToFloat(edit2.text);
 c1:= StrToFloat(edit3.text);
 a2:= StrToFloat(edit4.text);
@@ -252,8 +247,13 @@ c3:= StrToFloat(edit9.text);
 r1:= StrToFloat(edit10.text);
 r2:= StrToFloat(edit11.text);
 r3:= StrToFloat(edit12.text);
-d1:= (a1*b2*c3)+(b1*c2*a3)+(c1*a2*b3);
-d2:= (a3*b2*c1)+(b3*c2*a1)+(c3*a2*b1);
+
+
+
+
+d2:= (a3*b2*c1)+(b3*c2*StrToFloat(a1.Text))+(c3*a2*b1);
+d2:= StrToFloat(edit7.text)*StrToFloat(edit5.text)*StrToFloat(edit3.text);//a3*b2*c1
+d2:= d2+ (StrToFloat(edit8.text)*StrToFloat(edit6.text)*StrToFloat(a1.Text));//b3*c2*a1
 d3:= d1-(d2);
 dx2:= (r3*b2*c1)+(b3*c2*r1)+(c3*r2*b1);
 dx1:= (r1*b2*c3)+(b1*c2*r3)+(c1*r2*b3);
@@ -264,16 +264,16 @@ except
   dx := 0; // Ou seja, se o total for divido por zero, então atribui zero para a variável valor;
 end;
 
-dy1:= (a1*r2*c3)+(r1*c2*a3)+(c1*a2*r3);
-dy2:= (a3*r2*c1)+(r3*c2*a1)+(c3*a2*r1);
+dy1:= (StrToFloat(a1.Text)*r2*c3)+(r1*c2*a3)+(c1*a2*r3);
+dy2:= (a3*r2*c1)+(r3*c2*StrToFloat(a1.Text))+(c3*a2*r1);
 dy3:= dy1-(dy2);
 
 try
  dy := dy3/ d3; // Sendo que o divisor pode ser zero
 except
   dy := 0; // Ou seja, se o total for divido por zero, então atribui zero para a variável valor;
-dz1:= (a1*b2*r3)+(b1*r2*a3)+(r1*a2*b3);
-dz2:= (a3*b2*r1)+(b3*r2*a1)+(r3*a2*b1);
+dz1:= (StrToFloat(a1.Text)*b2*r3)+(b1*r2*a3)+(r1*a2*b3);
+dz2:= (a3*b2*r1)+(b3*r2*StrToFloat(a1.Text))+(r3*a2*b1);
 dz3:= dz1-(dz2);
 try
  dz := dz3/d3; // Sendo que o divisor pode ser zero
@@ -363,13 +363,13 @@ memo1.Lines.Add('------------------------------------------------------------');
 end;
 if radiobutton2.Checked=true then
 begin
-a1:= StrToFloat(edit1.text);
+
 b1:= StrToFloat(edit2.text);
 c1:= StrToFloat(edit10.text);
 a2:= StrToFloat(edit4.text);
 b2:= StrToFloat(edit5.text);
 c2:= StrToFloat(edit11.text);
-d1:= (a1*b2);
+d1:= (StrToFloat(a1.Text)*b2);
 d2:= (a2*b1);
 d3:= d1-(d2);
 dx1:= c1*b2;
@@ -413,7 +413,7 @@ end;
 end;
 procedure TForm1.a1Exit(Sender: TObject);
 begin
-edit1.Font.Color:= clWhite;
+a1.Font.Color:= clWhite;
 
 end;
 
@@ -511,7 +511,7 @@ end;
 
 procedure TForm1.a1KeyPress(Sender: TObject; var Key: Char);
 begin
-Key := Ret_Numero( Key, Edit1.Text );
+Key := Ret_Numero( Key, a1.Text );
 
 end;
 
@@ -584,7 +584,7 @@ end;
 procedure TForm1.FlatButton2Click(Sender: TObject);
 begin
 if messagedlg('Você deseja Limpar Todas as Caixas de Texto e o Relatório?', mtConfirmation, [mbYes,MbNo],0)=mrYes then
-edit1.Clear;
+a1.Clear;
 edit2.Clear;
 edit3.Clear;
 edit4.Clear;
@@ -601,7 +601,7 @@ end;
 
 procedure TForm1.a1Enter(Sender: TObject);
 begin
-edit1.Font.Color:= ClBlack;
+a1.Font.Color:= ClBlack;
 end;
 
 procedure TForm1.Edit2Enter(Sender: TObject);
@@ -666,7 +666,7 @@ begin
 tmpcolor := TColorDialog.Create(nil);
 tmpcolor.Execute;
 Form1.color:=tmpcolor.Color;
-Edit1.ColorFlat:=tmpcolor.Color;
+a1.ColorFlat:=tmpcolor.Color;
 Edit2.ColorFlat:=tmpcolor.Color;
 Edit3.ColorFlat:=tmpcolor.Color;
 Edit4.ColorFlat:=tmpcolor.Color;
@@ -695,7 +695,7 @@ tmpcolor:TColorDialog;
 begin
 tmpcolor := TColorDialog.Create(nil);
 tmpcolor.Execute;
-Edit1.ColorBorder:=tmpcolor.Color;
+a1.ColorBorder:=tmpcolor.Color;
 Edit2.ColorBorder:=tmpcolor.Color;
 Edit3.ColorBorder:=tmpcolor.Color;
 Edit4.ColorBorder:=tmpcolor.Color;
@@ -832,7 +832,7 @@ procedure TForm1.FlatButton9Click(Sender: TObject);
 begin
 form1.font.Color:= clGray;
 image1.Visible:=false;
-Edit1.ColorBorder:=ClWhite;
+a1.ColorBorder:=ClWhite;
 Edit2.ColorBorder:=ClWhite;
 Edit3.ColorBorder:=ClWhite;
 Edit4.ColorBorder:=ClWhite;
@@ -851,54 +851,11 @@ Flatbutton4.ColorBorder:= ClWhite;
 Flatbutton5.ColorBorder:= ClWhite;
 Flatbutton6.ColorBorder:= ClWhite;
 end;
-procedure TForm1.Timer3Timer(Sender: TObject);
-begin
-if radiobutton1.Checked=true then
-begin
-edit7.Visible:= true;
-label7.Visible:= true;
-edit8.Visible:= true;
-label8.Visible:= true;
-edit9.Visible:= true;
-edit3.Visible:= true;
-edit6.Visible:= true;
-label2.Visible:=true;
-label1.Visible:=true;
-label4.Visible:=true;
-label5.Visible:=true;
-label9.Visible:= true;
-label3.Visible:= true ;
-label6.Visible:= true;
-label7.Visible:=true;
-label8.Visible:=true;
-label10.Visible:=true;
-edit12.Visible:=true;
-label12.Visible:=true;
-edit1.Visible:=true;
-edit2.Visible:=true;
-edit3.Visible:=true;
-edit4.Visible:=true;
-edit5.Visible:=true;
-edit6.Visible:=true;
-edit7.Visible:=true;
-edit8.Visible:=true;
-edit9.Visible:=true;
-edit10.Visible:=true;
-edit11.Visible:=true;
-label11.Visible:=true;
-label12.Visible:=true;
-edit10.Left:=720;
-edit11.Left:=720;
-label10.Left:=696;
-label11.Left:=696;
 
-
-end;
-end;
 
 procedure TForm1.Image1Click(Sender: TObject);
 begin
-if (radiobutton3.Checked= true) and (edit1.Text<>'')and(edit2.Text<>'')and(edit4.Text<>'')and(edit5.Text<>'')and(edit10.Text<>'')and(edit11.Text<>'') then
+if (radiobutton3.Checked= true) and (a1.Text<>'')and(edit2.Text<>'')and(edit4.Text<>'')and(edit5.Text<>'')and(edit10.Text<>'')and(edit11.Text<>'') then
 begin
 button1.Enabled:=true
 end
@@ -909,17 +866,17 @@ end;
 
 procedure TForm1.FlatEdit1Enter(Sender: TObject);
 begin
-edit1.Font.Color:= ClBlack;
+a1.Font.Color:= ClBlack;
 end;
 
 procedure TForm1.FlatEdit2Enter(Sender: TObject);
 begin
-edit1.Font.Color:= ClBlack;
+a1.Font.Color:= ClBlack;
 end;
 
 procedure TForm1.FlatEdit3Enter(Sender: TObject);
 begin
-edit1.Font.Color:= ClBlack;
+a1.Font.Color:= ClBlack;
 end;
 
 procedure TForm1.Memo1Enter(Sender: TObject);
@@ -968,7 +925,7 @@ label8.Visible:=false;
 label10.Visible:=false;
 edit12.Visible:=false;
 label12.Visible:=false;
-edit1.Visible:=false;
+a1.Visible:=false;
 edit2.Visible:=false;
 edit3.Visible:=false;
 edit4.Visible:=false;
@@ -1034,7 +991,7 @@ edit8.Visible:=false;
 edit9.Visible:=false;
 
 label12.Visible:=false;
-edit1.Visible:=true;
+a1.Visible:=true;
 edit2.Visible:=true;
 edit4.Visible:=true;
 edit5.Visible:=true;
@@ -1073,7 +1030,7 @@ label18.Visible:=false;
 label19.Visible:=false;
 form1.Caption:='REGRA DE CRAMER BY: RAFAELFAUSTINI';
 
-if radiobutton1.Checked= true and (edit1.Text<>'')and(edit2.Text<>'')and(edit3.Text<>'')and(edit4.Text<>'')and(edit5.Text<>'')and(edit6.Text<>'')and(edit7.Text<>'')and(edit8.Text<>'')and(edit9.Text<>'')and(edit10.Text<>'')and(edit11.Text<>'')and(edit12.Text<>'')then
+if radiobutton1.Checked= true and (a1.Text<>'')and(edit2.Text<>'')and(edit3.Text<>'')and(edit4.Text<>'')and(edit5.Text<>'')and(edit6.Text<>'')and(edit7.Text<>'')and(edit8.Text<>'')and(edit9.Text<>'')and(edit10.Text<>'')and(edit11.Text<>'')and(edit12.Text<>'')then
 begin
 button1.Enabled:=true;
 end
