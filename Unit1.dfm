@@ -485,9 +485,9 @@ object Form1: TForm1
     Anchors = [akLeft, akTop, akRight, akBottom]
   end
   object Button1: TFlatButton
-    Left = 512
+    Left = 448
     Top = 336
-    Width = 169
+    Width = 137
     Height = 41
     Color = 15963681
     ColorFocused = clWhite
@@ -506,10 +506,10 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object FlatButton1: TFlatButton
-    Left = 784
-    Top = 360
+    Left = 608
+    Top = 336
     Width = 137
-    Height = 28
+    Height = 41
     Color = clGray
     ColorBorder = clWhite
     Caption = 'Save'
@@ -522,10 +522,9 @@ object Form1: TForm1
     ParentColor = False
     TabOrder = 14
     OnClick = FlatButton1Click
-    Anchors = [akLeft, akTop, akRight, akBottom]
   end
   object FlatButton2: TFlatButton
-    Left = 360
+    Left = 296
     Top = 336
     Width = 137
     Height = 41
@@ -541,7 +540,6 @@ object Form1: TForm1
     ParentColor = False
     TabOrder = 15
     OnClick = FlatButton2Click
-    Anchors = [akLeft, akTop, akRight, akBottom]
   end
   object FlatButton3: TFlatButton
     Left = 0
@@ -621,7 +619,7 @@ object Form1: TForm1
     Top = 152
     Width = 81
     Height = 25
-    ColorBorder = clRed
+    ColorBorder = clBtnHighlight
     Caption = 'Bg Image'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
@@ -670,8 +668,8 @@ object Form1: TForm1
     OnClick = RadioButton1Click
   end
   object RadioButton2: TRadioButton
-    Left = 88
-    Top = 72
+    Left = 184
+    Top = 56
     Width = 121
     Height = 17
     Caption = '2 variables equation'
@@ -744,8 +742,8 @@ object Form1: TForm1
     OnEnter = FlatEdit3Enter
   end
   object RadioButton3: TRadioButton
-    Left = 88
-    Top = 88
+    Left = 312
+    Top = 56
     Width = 113
     Height = 17
     Caption = '2'#186' Degree'
@@ -773,7 +771,7 @@ object Form1: TForm1
     Font.Style = []
     Color = 13408512
     ColorHighLight = 13408512
-    ColorShadow = clBlack
+    ColorShadow = 13408512
     Align = alTop
     TabOrder = 28
     UseDockManager = True
