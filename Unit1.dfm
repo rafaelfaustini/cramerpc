@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 234
   Width = 1377
   Height = 690
-  Caption = 'REGRA DE CRAMER BY:RAFAELFAUSTINI'
+  Caption = 'Snizer Cramer'
   Color = clGray
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -485,7 +485,7 @@ object Form1: TForm1
     Anchors = [akLeft, akTop, akRight, akBottom]
   end
   object Button1: TFlatButton
-    Left = 448
+    Left = 488
     Top = 336
     Width = 137
     Height = 41
@@ -506,7 +506,7 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object FlatButton1: TFlatButton
-    Left = 608
+    Left = 632
     Top = 336
     Width = 137
     Height = 41
@@ -524,7 +524,7 @@ object Form1: TForm1
     OnClick = FlatButton1Click
   end
   object FlatButton2: TFlatButton
-    Left = 296
+    Left = 344
     Top = 336
     Width = 137
     Height = 41
